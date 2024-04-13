@@ -26,9 +26,10 @@ namespace PhanHe1
 
         private void radioButtonRU_CheckedChanged(object sender, EventArgs e)
         {
-            if(radioButtonRole.Checked)
+            if(radioButtonRU.Checked)
             {
-
+                panelNotRU.Hide(); 
+                panel2.Show();
             }
         }
 
@@ -38,6 +39,10 @@ namespace PhanHe1
             {
                 labelName = "Tên Role: ";
                 changeLabelName(labelName);
+                panelNotRU.Show();
+                panel2.Hide();
+
+
             }
 
         }
@@ -47,7 +52,11 @@ namespace PhanHe1
             if( radioButtonUser.Checked)
             {
                 labelName = "Tên User: ";
-                changeLabelName(labelName); 
+                changeLabelName(labelName);
+                panelNotRU.Show();
+                panel2.Hide();
+
+
             }
 
         }
@@ -58,6 +67,58 @@ namespace PhanHe1
 
 
         private void labelNameG_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBoxOpion_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panelOption_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void labelOption_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonGrant_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void checkBoxU_CheckedChanged(object sender, EventArgs e)
+        {
+            if(checkBoxU.Checked)
+            {
+                panel1.Show();  
+            }
+            else
+            { 
+                panel1.Hide();
+            }  
+        }
+
+        private void textBoxForU_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panelNotRU_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }

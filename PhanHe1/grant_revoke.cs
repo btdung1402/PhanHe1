@@ -71,6 +71,7 @@ namespace PhanHe1
             form.StartPosition = FormStartPosition.Manual;
             form.AutoSize = true;
             form.Location = new Point(0, 0);
+            form.Dock = DockStyle.Fill;
             panelExecuteGR.Controls.Add(form);
         }
 
