@@ -29,10 +29,9 @@ namespace PhanHe1
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            string name = textBox1.Text;
+            string name = textBox1.Text.Trim();
             string query = "select * form " + name + ";";
-            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
-            dataGridView1.DataSource = OracleDataProvider.Instance.ExecuteQuery(query);
+           
             //try
             //{
             //    dataGridView1.DataSource = OracleDataProvider.Instance.ExecuteQuery(query);
@@ -58,6 +57,18 @@ namespace PhanHe1
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            string name = textBox1.Text.Trim();
+            string role = textBox2.Text.Trim();
+            string query = "";
+            //if(radioButtonRU.Checked)
+            //{
+            //    query= "REVOKE "+ role+" ON BH_KHACHHANG FROM king;"
+            //}
 
         }
     }

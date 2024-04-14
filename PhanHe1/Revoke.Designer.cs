@@ -39,6 +39,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.radioButtonRkhoiU = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,24 +56,24 @@
             // 
             this.radioButtonRR.AutoSize = true;
             this.radioButtonRR.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonRR.Location = new System.Drawing.Point(282, 14);
+            this.radioButtonRR.Location = new System.Drawing.Point(201, 16);
             this.radioButtonRR.Name = "radioButtonRR";
-            this.radioButtonRR.Size = new System.Drawing.Size(102, 36);
+            this.radioButtonRR.Size = new System.Drawing.Size(239, 36);
             this.radioButtonRR.TabIndex = 4;
             this.radioButtonRR.TabStop = true;
-            this.radioButtonRR.Text = "Role";
+            this.radioButtonRR.Text = "xoá quyền role";
             this.radioButtonRR.UseVisualStyleBackColor = true;
             // 
             // radioButtonRU
             // 
             this.radioButtonRU.AutoSize = true;
             this.radioButtonRU.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonRU.Location = new System.Drawing.Point(474, 12);
+            this.radioButtonRU.Location = new System.Drawing.Point(465, 16);
             this.radioButtonRU.Name = "radioButtonRU";
-            this.radioButtonRU.Size = new System.Drawing.Size(102, 36);
+            this.radioButtonRU.Size = new System.Drawing.Size(246, 36);
             this.radioButtonRU.TabIndex = 5;
             this.radioButtonRU.TabStop = true;
-            this.radioButtonRU.Text = "User";
+            this.radioButtonRU.Text = "xoá quyền user";
             this.radioButtonRU.UseVisualStyleBackColor = true;
             // 
             // label2
@@ -81,9 +82,9 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(21, 16);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(218, 32);
+            this.label2.Size = new System.Drawing.Size(157, 32);
             this.label2.TabIndex = 6;
-            this.label2.Text = "Thực hiện trên:";
+            this.label2.Text = "Thực hiện:";
             // 
             // labelU
             // 
@@ -139,12 +140,13 @@
             // 
             this.button2.AutoSize = true;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(740, 262);
+            this.button2.Location = new System.Drawing.Point(747, 429);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(144, 42);
             this.button2.TabIndex = 10;
             this.button2.Text = "Xác nhận";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // dataGridView1
             // 
@@ -157,12 +159,25 @@
             this.dataGridView1.TabIndex = 11;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
+            // radioButtonRkhoiU
+            // 
+            this.radioButtonRkhoiU.AutoSize = true;
+            this.radioButtonRkhoiU.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonRkhoiU.Location = new System.Drawing.Point(717, 16);
+            this.radioButtonRkhoiU.Name = "radioButtonRkhoiU";
+            this.radioButtonRkhoiU.Size = new System.Drawing.Size(272, 36);
+            this.radioButtonRkhoiU.TabIndex = 12;
+            this.radioButtonRkhoiU.TabStop = true;
+            this.radioButtonRkhoiU.Text = "xoá role của user";
+            this.radioButtonRkhoiU.UseVisualStyleBackColor = true;
+            // 
             // Revoke
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Info;
-            this.ClientSize = new System.Drawing.Size(979, 555);
+            this.ClientSize = new System.Drawing.Size(1039, 555);
+            this.Controls.Add(this.radioButtonRkhoiU);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label3);
@@ -194,5 +209,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.RadioButton radioButtonRkhoiU;
     }
 }
