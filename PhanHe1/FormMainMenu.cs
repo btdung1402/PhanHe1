@@ -107,24 +107,6 @@ namespace PhanHe1
         }
 
 
-
-        private void buttonLogOut_Click(object sender, EventArgs e)
-        {
-            ActivateButton(sender);
-      
-            // Show the message box at the center of the screen
-            using(new CenterWinDialog(this))
-            {
-                DialogResult result = MessageBox.Show("Bạn thật sự muốn đăng xuất?", "Đăng xuất", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if (result == DialogResult.Yes)
-                {
-                    _relog = true;
-                    this.Close();
-                }
-            }
-          
-        }
-
         private void btnCloseChildForm_Click(object sender, EventArgs e)
         {
             if(activeForm != null)

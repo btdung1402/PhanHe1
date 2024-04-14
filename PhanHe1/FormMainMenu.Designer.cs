@@ -29,12 +29,9 @@
         private void InitializeComponent()
         {
             this.panelMenu = new System.Windows.Forms.Panel();
-<<<<<<< HEAD
             this.btnLogOut = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-=======
->>>>>>> e385080f2aa3e30f015b6cf60722523bf53cd253
             this.button3 = new System.Windows.Forms.Button();
             this.btnPriv = new System.Windows.Forms.Button();
             this.btnList = new System.Windows.Forms.Button();
@@ -51,12 +48,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblUser = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-<<<<<<< HEAD
-=======
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.btnLogOut = new System.Windows.Forms.Button();
->>>>>>> e385080f2aa3e30f015b6cf60722523bf53cd253
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             this.panelTitleBar.SuspendLayout();
@@ -80,7 +71,6 @@
             this.panelMenu.Size = new System.Drawing.Size(303, 553);
             this.panelMenu.TabIndex = 0;
             // 
-<<<<<<< HEAD
             // btnLogOut
             // 
             this.btnLogOut.Dock = System.Windows.Forms.DockStyle.Top;
@@ -139,8 +129,6 @@
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button1.UseVisualStyleBackColor = true;
             // 
-=======
->>>>>>> e385080f2aa3e30f015b6cf60722523bf53cd253
             // button3
             // 
             this.button3.Dock = System.Windows.Forms.DockStyle.Top;
@@ -302,10 +290,7 @@
             this.lblTitle.Size = new System.Drawing.Size(182, 33);
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "TRANG CHỦ";
-<<<<<<< HEAD
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-=======
->>>>>>> e385080f2aa3e30f015b6cf60722523bf53cd253
             // 
             // panelDesktop
             // 
@@ -359,66 +344,6 @@
             this.panel1.Size = new System.Drawing.Size(280, 1);
             this.panel1.TabIndex = 7;
             // 
-<<<<<<< HEAD
-=======
-            // button1
-            // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.button1.ForeColor = System.Drawing.Color.Gainsboro;
-            this.button1.Image = global::PhanHe1.Properties.Resources.icons8_logout_48;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(0, 260);
-            this.button1.Name = "button1";
-            this.button1.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-            this.button1.Size = new System.Drawing.Size(303, 60);
-            this.button1.TabIndex = 5;
-            this.button1.Text = " Đăng xuất";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.button2.ForeColor = System.Drawing.Color.Gainsboro;
-            this.button2.Image = global::PhanHe1.Properties.Resources.icons8_logout_48;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(0, 320);
-            this.button2.Name = "button2";
-            this.button2.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-            this.button2.Size = new System.Drawing.Size(303, 60);
-            this.button2.TabIndex = 6;
-            this.button2.Text = " Đăng xuất";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // btnLogOut
-            // 
-            this.btnLogOut.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnLogOut.FlatAppearance.BorderSize = 0;
-            this.btnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnLogOut.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnLogOut.Image = global::PhanHe1.Properties.Resources.icons8_logout_48;
-            this.btnLogOut.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLogOut.Location = new System.Drawing.Point(0, 380);
-            this.btnLogOut.Name = "btnLogOut";
-            this.btnLogOut.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-            this.btnLogOut.Size = new System.Drawing.Size(303, 60);
-            this.btnLogOut.TabIndex = 8;
-            this.btnLogOut.Text = " Đăng xuất";
-            this.btnLogOut.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLogOut.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnLogOut.UseVisualStyleBackColor = true;
-            // 
->>>>>>> e385080f2aa3e30f015b6cf60722523bf53cd253
             // FormMainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -430,10 +355,7 @@
             this.Controls.Add(this.panelMenu);
             this.MinimumSize = new System.Drawing.Size(900, 450);
             this.Name = "FormMainMenu";
-<<<<<<< HEAD
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-=======
->>>>>>> e385080f2aa3e30f015b6cf60722523bf53cd253
             this.Text = "User Administration";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormMainMenu_FormClosed);
             this.Load += new System.EventHandler(this.FormMainMenu_Load);

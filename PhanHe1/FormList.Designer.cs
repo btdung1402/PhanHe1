@@ -57,20 +57,11 @@
             // 
             // FormList
             // 
-<<<<<<< HEAD
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(894, 480);
             this.Controls.Add(this.dtgv);
             this.Name = "FormList";
             this.Text = "Xem Users";
-=======
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(894, 480);
-            this.Controls.Add(this.dtgv);
-            this.Name = "FormList";
-            this.Text = "FormList";
->>>>>>> e385080f2aa3e30f015b6cf60722523bf53cd253
             this.Load += new System.EventHandler(this.FormList_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgv)).EndInit();
             this.ResumeLayout(false);
