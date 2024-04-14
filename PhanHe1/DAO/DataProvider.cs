@@ -90,8 +90,6 @@ namespace PhanHe1.DAO
                 connection.Open();
 
                 OracleCommand command = new OracleCommand(sql, connection);
-               
-
                 connection.Close();
             }
         }

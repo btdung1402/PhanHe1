@@ -128,11 +128,11 @@ namespace PhanHe1
                     string grantQuery = "";
                     if (right != "")
                     {
-                        grantQuery = "GRANT " + right + " ON sys." + table + " TO " + name + " " + option + ";";
-                       // MessageBox.Show(grantQuery);
+                        grantQuery = "GRANT " + right + " ON sys." + table + " TO " + name + " " + option ;
+                       MessageBox.Show(grantQuery);
                         try
                         {
-                            OracleDataProvider.Instance.RunQuery(grantQuery);
+                            OracleDataProvider.Instance.ExecuteNonQuery(grantQuery);
 
                             MessageBox.Show("Quyền đã được cấp thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
@@ -144,12 +144,12 @@ namespace PhanHe1
                     }
                     if (spe_right != "" && col != "")
                     {
-                        spe_grantQuery = "GRANT " + spe_right + " (" + col + ")" + " ON sys." + table + " TO " + name + " " + option + ";";
+                        spe_grantQuery = "GRANT " + spe_right + " (" + col + ")" + " ON sys." + table + " TO " + name + " " + option;
                         MessageBox.Show(spe_grantQuery);
 
                         try
                         {
-                            OracleDataProvider.Instance.RunQuery(spe_grantQuery);
+                            OracleDataProvider.Instance.ExecuteNonQuery(spe_grantQuery);
                             MessageBox.Show("Quyền đã được cấp thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                         catch (Exception ex)
@@ -224,10 +224,10 @@ namespace PhanHe1
                 }
                 else
                 {
-                    string grantQuery = $"GRANT {role} TO {name};";
+                    string grantQuery = $"GRANT {role} TO {name}";
                     try
                     {
-                        OracleDataProvider.Instance.RunQuery(grantQuery);
+                        OracleDataProvider.Instance.ExecuteNonQuery(grantQuery);
                         MessageBox.Show("Quyền đã được cấp thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     catch (Exception ex)
