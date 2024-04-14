@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Oracle.ManagedDataAccess.Client;
 using System.Configuration;
 using System.DirectoryServices;
+using System.Windows.Forms;
 
 namespace PhanHe1.DAO
 {
@@ -129,6 +130,7 @@ namespace PhanHe1.DAO
             return data;
         }
 
+
         public int ExecuteNonQuery(string sql, object[] parameters = null)
         {
             int rowsAffected = 0;
@@ -190,7 +192,7 @@ namespace PhanHe1.DAO
             return data;
         }
 
-        // Add more methods for specific database operations as needed
+
 
     }
 
