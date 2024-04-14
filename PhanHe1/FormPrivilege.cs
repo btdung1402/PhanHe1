@@ -46,6 +46,7 @@ namespace PhanHe1
             }
             catch (OracleException ex) 
             {
+<<<<<<< HEAD
                 if (ex.Number == 942) // ORA-00942: table or view does not exist
                 {
                     // Handle the specific error here
@@ -56,6 +57,9 @@ namespace PhanHe1
                     // Handle other Oracle exceptions
                     MessageBox.Show("Oracle Error: " + ex.Message);
                 }
+=======
+                MessageBox.Show("Error: " + ex.Message);
+>>>>>>> e385080f2aa3e30f015b6cf60722523bf53cd253
             }
 
         }
@@ -76,6 +80,7 @@ namespace PhanHe1
             }
             catch (OracleException ex)
             {
+<<<<<<< HEAD
                 if (ex.Number == 942) // ORA-00942: table or view does not exist
                 {
                     // Handle the specific error here
@@ -86,6 +91,9 @@ namespace PhanHe1
                     // Handle other Oracle exceptions
                     MessageBox.Show("Oracle Error: " + ex.Message);
                 }
+=======
+                MessageBox.Show("Error: " + ex.Message);
+>>>>>>> e385080f2aa3e30f015b6cf60722523bf53cd253
             }
         }
 
