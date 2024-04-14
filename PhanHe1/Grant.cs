@@ -45,10 +45,11 @@ namespace PhanHe1
                 changeLabelName(labelName);
                 panelNotRU.Show();
                 panel2.Hide();
+                checkBoxOpion.Hide();
 
 
             }
-
+            
         }
 
         private void radioButtonUser_CheckedChanged(object sender, EventArgs e)
@@ -59,6 +60,7 @@ namespace PhanHe1
                 changeLabelName(labelName);
                 panelNotRU.Show();
                 panel2.Hide();
+                checkBoxOpion.Show();
 
 
             }
@@ -77,7 +79,7 @@ namespace PhanHe1
 
         private void checkBoxOpion_CheckedChanged(object sender, EventArgs e)
         {
-
+            
         }
 
         private void panelOption_Paint(object sender, PaintEventArgs e)
@@ -183,7 +185,8 @@ namespace PhanHe1
         {
             if(checkBoxU.Checked)
             {
-                panel1.Show();  
+                panel1.Show();
+       
             }
             else
             { 
@@ -224,7 +227,8 @@ namespace PhanHe1
                 }
                 else
                 {
-                    string grantQuery = $"GRANT {role} TO {name}";
+                    string grantQuery = "GRANT " + role + " TO " + name;
+                    MessageBox.Show(grantQuery);
                     try
                     {
                         OracleDataProvider.Instance.ExecuteNonQuery(grantQuery);
