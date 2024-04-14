@@ -36,22 +36,22 @@
             this.radioButtonUser = new System.Windows.Forms.RadioButton();
             this.checkBoxOpion = new System.Windows.Forms.CheckBox();
             this.panelOption = new System.Windows.Forms.Panel();
-            this.labelOption = new System.Windows.Forms.Label();
-            this.checkBoxI = new System.Windows.Forms.CheckBox();
-            this.checkBoxD = new System.Windows.Forms.CheckBox();
-            this.checkBoxS = new System.Windows.Forms.CheckBox();
             this.checkBoxU = new System.Windows.Forms.CheckBox();
+            this.checkBoxS = new System.Windows.Forms.CheckBox();
+            this.checkBoxD = new System.Windows.Forms.CheckBox();
+            this.checkBoxI = new System.Windows.Forms.CheckBox();
+            this.labelOption = new System.Windows.Forms.Label();
             this.labelTable = new System.Windows.Forms.Label();
             this.textBoxTable = new System.Windows.Forms.TextBox();
             this.buttonGrant = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.labelForU = new System.Windows.Forms.Label();
             this.textBoxForU = new System.Windows.Forms.TextBox();
+            this.labelForU = new System.Windows.Forms.Label();
             this.panelNotRU = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.labelRU = new System.Windows.Forms.Label();
-            this.textBoxRU = new System.Windows.Forms.TextBox();
             this.buttonRU = new System.Windows.Forms.Button();
+            this.textBoxRU = new System.Windows.Forms.TextBox();
+            this.labelRU = new System.Windows.Forms.Label();
             this.panelOption.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panelNotRU.SuspendLayout();
@@ -150,38 +150,17 @@
             this.panelOption.TabIndex = 8;
             this.panelOption.Paint += new System.Windows.Forms.PaintEventHandler(this.panelOption_Paint);
             // 
-            // labelOption
+            // checkBoxU
             // 
-            this.labelOption.AutoSize = true;
-            this.labelOption.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelOption.Location = new System.Drawing.Point(3, 24);
-            this.labelOption.Name = "labelOption";
-            this.labelOption.Size = new System.Drawing.Size(194, 32);
-            this.labelOption.TabIndex = 0;
-            this.labelOption.Text = "Chọn quyền: ";
-            this.labelOption.Click += new System.EventHandler(this.labelOption_Click);
-            // 
-            // checkBoxI
-            // 
-            this.checkBoxI.AutoSize = true;
-            this.checkBoxI.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxI.Location = new System.Drawing.Point(237, 24);
-            this.checkBoxI.Name = "checkBoxI";
-            this.checkBoxI.Size = new System.Drawing.Size(116, 36);
-            this.checkBoxI.TabIndex = 1;
-            this.checkBoxI.Text = "Insert";
-            this.checkBoxI.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxD
-            // 
-            this.checkBoxD.AutoSize = true;
-            this.checkBoxD.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxD.Location = new System.Drawing.Point(237, 76);
-            this.checkBoxD.Name = "checkBoxD";
-            this.checkBoxD.Size = new System.Drawing.Size(129, 36);
-            this.checkBoxD.TabIndex = 2;
-            this.checkBoxD.Text = "Delete";
-            this.checkBoxD.UseVisualStyleBackColor = true;
+            this.checkBoxU.AutoSize = true;
+            this.checkBoxU.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxU.Location = new System.Drawing.Point(520, 76);
+            this.checkBoxU.Name = "checkBoxU";
+            this.checkBoxU.Size = new System.Drawing.Size(138, 36);
+            this.checkBoxU.TabIndex = 4;
+            this.checkBoxU.Text = "Update";
+            this.checkBoxU.UseVisualStyleBackColor = true;
+            this.checkBoxU.CheckedChanged += new System.EventHandler(this.checkBoxU_CheckedChanged);
             // 
             // checkBoxS
             // 
@@ -194,17 +173,38 @@
             this.checkBoxS.Text = "Select";
             this.checkBoxS.UseVisualStyleBackColor = true;
             // 
-            // checkBoxU
+            // checkBoxD
             // 
-            this.checkBoxU.AutoSize = true;
-            this.checkBoxU.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxU.Location = new System.Drawing.Point(520, 76);
-            this.checkBoxU.Name = "checkBoxU";
-            this.checkBoxU.Size = new System.Drawing.Size(138, 36);
-            this.checkBoxU.TabIndex = 4;
-            this.checkBoxU.Text = "Update";
-            this.checkBoxU.UseVisualStyleBackColor = true;
-            this.checkBoxU.CheckedChanged += new System.EventHandler(this.checkBoxU_CheckedChanged);
+            this.checkBoxD.AutoSize = true;
+            this.checkBoxD.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxD.Location = new System.Drawing.Point(237, 76);
+            this.checkBoxD.Name = "checkBoxD";
+            this.checkBoxD.Size = new System.Drawing.Size(129, 36);
+            this.checkBoxD.TabIndex = 2;
+            this.checkBoxD.Text = "Delete";
+            this.checkBoxD.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxI
+            // 
+            this.checkBoxI.AutoSize = true;
+            this.checkBoxI.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxI.Location = new System.Drawing.Point(237, 24);
+            this.checkBoxI.Name = "checkBoxI";
+            this.checkBoxI.Size = new System.Drawing.Size(116, 36);
+            this.checkBoxI.TabIndex = 1;
+            this.checkBoxI.Text = "Insert";
+            this.checkBoxI.UseVisualStyleBackColor = true;
+            // 
+            // labelOption
+            // 
+            this.labelOption.AutoSize = true;
+            this.labelOption.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelOption.Location = new System.Drawing.Point(3, 24);
+            this.labelOption.Name = "labelOption";
+            this.labelOption.Size = new System.Drawing.Size(194, 32);
+            this.labelOption.TabIndex = 0;
+            this.labelOption.Text = "Chọn quyền: ";
+            this.labelOption.Click += new System.EventHandler(this.labelOption_Click);
             // 
             // labelTable
             // 
@@ -249,6 +249,15 @@
             this.panel1.Visible = false;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // textBoxForU
+            // 
+            this.textBoxForU.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxForU.Location = new System.Drawing.Point(163, 4);
+            this.textBoxForU.Name = "textBoxForU";
+            this.textBoxForU.Size = new System.Drawing.Size(324, 39);
+            this.textBoxForU.TabIndex = 13;
+            this.textBoxForU.TextChanged += new System.EventHandler(this.textBoxForU_TextChanged);
+            // 
             // labelForU
             // 
             this.labelForU.AutoSize = true;
@@ -258,15 +267,6 @@
             this.labelForU.Size = new System.Drawing.Size(113, 29);
             this.labelForU.TabIndex = 13;
             this.labelForU.Text = "Tên Cột:";
-            // 
-            // textBoxForU
-            // 
-            this.textBoxForU.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxForU.Location = new System.Drawing.Point(163, 4);
-            this.textBoxForU.Name = "textBoxForU";
-            this.textBoxForU.Size = new System.Drawing.Size(324, 39);
-            this.textBoxForU.TabIndex = 13;
-            this.textBoxForU.TextChanged += new System.EventHandler(this.textBoxForU_TextChanged);
             // 
             // panelNotRU
             // 
@@ -293,24 +293,6 @@
             this.panel2.TabIndex = 14;
             this.panel2.Visible = false;
             // 
-            // labelRU
-            // 
-            this.labelRU.AutoSize = true;
-            this.labelRU.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelRU.Location = new System.Drawing.Point(3, 24);
-            this.labelRU.Name = "labelRU";
-            this.labelRU.Size = new System.Drawing.Size(121, 29);
-            this.labelRU.TabIndex = 15;
-            this.labelRU.Text = "Tên Role";
-            // 
-            // textBoxRU
-            // 
-            this.textBoxRU.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxRU.Location = new System.Drawing.Point(154, 20);
-            this.textBoxRU.Name = "textBoxRU";
-            this.textBoxRU.Size = new System.Drawing.Size(327, 39);
-            this.textBoxRU.TabIndex = 15;
-            // 
             // buttonRU
             // 
             this.buttonRU.AutoSize = true;
@@ -323,6 +305,26 @@
             this.buttonRU.TabIndex = 13;
             this.buttonRU.Text = "Thực hiện cấp";
             this.buttonRU.UseVisualStyleBackColor = false;
+            this.buttonRU.Click += new System.EventHandler(this.buttonRU_Click);
+            // 
+            // textBoxRU
+            // 
+            this.textBoxRU.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxRU.Location = new System.Drawing.Point(154, 20);
+            this.textBoxRU.Name = "textBoxRU";
+            this.textBoxRU.Size = new System.Drawing.Size(327, 39);
+            this.textBoxRU.TabIndex = 15;
+            this.textBoxRU.TextChanged += new System.EventHandler(this.textBoxRU_TextChanged);
+            // 
+            // labelRU
+            // 
+            this.labelRU.AutoSize = true;
+            this.labelRU.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelRU.Location = new System.Drawing.Point(3, 24);
+            this.labelRU.Name = "labelRU";
+            this.labelRU.Size = new System.Drawing.Size(121, 29);
+            this.labelRU.TabIndex = 15;
+            this.labelRU.Text = "Tên Role";
             // 
             // Grant
             // 

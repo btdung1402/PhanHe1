@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Oracle.ManagedDataAccess.Client;
 using System.Configuration;
+using System.Windows.Forms;
 
 namespace PhanHe1.DAO
 {
@@ -16,7 +17,8 @@ namespace PhanHe1.DAO
 
         //You can change the default connection string in app.config
         private static string _connectionString = ConfigurationManager.ConnectionStrings["con"].ConnectionString;
-      
+        private static OracleConnection connection;
+
         private OracleDataProvider(string connectionString)
         {
             _connectionString = connectionString;
@@ -81,6 +83,20 @@ namespace PhanHe1.DAO
             return data;
         }
 
+        public void RunQuery(string sql)
+        {
+            using (OracleConnection connection = new OracleConnection(_connectionString))
+            {
+                connection.Open();
+
+                OracleCommand command = new OracleCommand(sql, connection);
+               
+
+                connection.Close();
+            }
+        }
+
+
         public int ExecuteNonQuery(string sql, object[] parameters = null)
         {
             int rowsAffected = 0;
@@ -141,7 +157,7 @@ namespace PhanHe1.DAO
             return data;
         }
 
-        // Add more methods for specific database operations as needed
+
 
     }
 
