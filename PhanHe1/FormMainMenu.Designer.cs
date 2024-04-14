@@ -31,10 +31,6 @@
             this.panelMenu = new System.Windows.Forms.Panel();
             this.btnLogOut = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.btnPriv = new System.Windows.Forms.Button();
-            this.btnList = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panelTitleBar = new System.Windows.Forms.Panel();
@@ -45,9 +41,13 @@
             this.lblTitle = new System.Windows.Forms.Label();
             this.panelDesktop = new System.Windows.Forms.Panel();
             this.lblGroupName = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblUser = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.btnPriv = new System.Windows.Forms.Button();
+            this.btnList = new System.Windows.Forms.Button();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             this.panelTitleBar.SuspendLayout();
@@ -109,84 +109,6 @@
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.button1.ForeColor = System.Drawing.Color.Gainsboro;
-            this.button1.Image = global::PhanHe1.Properties.Resources.icons8_logout_48;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(0, 260);
-            this.button1.Name = "button1";
-            this.button1.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-            this.button1.Size = new System.Drawing.Size(303, 60);
-            this.button1.TabIndex = 5;
-            this.button1.Text = " Đăng xuất";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.button3.ForeColor = System.Drawing.Color.Gainsboro;
-            this.button3.Image = global::PhanHe1.Properties.Resources.icons8_user_48;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(0, 200);
-            this.button3.Name = "button3";
-            this.button3.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-            this.button3.Size = new System.Drawing.Size(303, 60);
-            this.button3.TabIndex = 3;
-            this.button3.Text = " Placeholder";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // btnPriv
-            // 
-            this.btnPriv.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnPriv.FlatAppearance.BorderSize = 0;
-            this.btnPriv.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPriv.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnPriv.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnPriv.Image = global::PhanHe1.Properties.Resources.icons8_privilege_48;
-            this.btnPriv.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPriv.Location = new System.Drawing.Point(0, 140);
-            this.btnPriv.Name = "btnPriv";
-            this.btnPriv.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-            this.btnPriv.Size = new System.Drawing.Size(303, 60);
-            this.btnPriv.TabIndex = 2;
-            this.btnPriv.Text = " Quyền User/Role";
-            this.btnPriv.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPriv.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnPriv.UseVisualStyleBackColor = true;
-            this.btnPriv.Click += new System.EventHandler(this.btnPriv_Click);
-            // 
-            // btnList
-            // 
-            this.btnList.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnList.FlatAppearance.BorderSize = 0;
-            this.btnList.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnList.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnList.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnList.Image = global::PhanHe1.Properties.Resources.icons8_list_48;
-            this.btnList.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnList.Location = new System.Drawing.Point(0, 80);
-            this.btnList.Name = "btnList";
-            this.btnList.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-            this.btnList.Size = new System.Drawing.Size(303, 60);
-            this.btnList.TabIndex = 1;
-            this.btnList.Text = " Xem User/Role";
-            this.btnList.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnList.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnList.UseVisualStyleBackColor = true;
-            this.btnList.Click += new System.EventHandler(this.btnList_Click);
             // 
             // panelLogo
             // 
@@ -272,7 +194,7 @@
             this.btnCloseChildForm.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnCloseChildForm.FlatAppearance.BorderSize = 0;
             this.btnCloseChildForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCloseChildForm.Image = global::PhanHe1.Properties.Resources.icons8_x_48__1_;
+            this.btnCloseChildForm.Image = global::PhanHe1.Properties.Resources.icons8_x_48;
             this.btnCloseChildForm.Location = new System.Drawing.Point(0, 0);
             this.btnCloseChildForm.Name = "btnCloseChildForm";
             this.btnCloseChildForm.Size = new System.Drawing.Size(75, 80);
@@ -315,16 +237,6 @@
             this.lblGroupName.TabIndex = 10;
             this.lblGroupName.Text = "Thực hiện bởi Nhóm 11";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::PhanHe1.Properties.Resources.icons8_customs_officer_78;
-            this.pictureBox1.Location = new System.Drawing.Point(171, 180);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(193, 147);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 9;
-            this.pictureBox1.TabStop = false;
-            // 
             // lblUser
             // 
             this.lblUser.AutoSize = true;
@@ -343,6 +255,94 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(280, 1);
             this.panel1.TabIndex = 7;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::PhanHe1.Properties.Resources.icons8_customs_officer_78;
+            this.pictureBox1.Location = new System.Drawing.Point(171, 180);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(193, 147);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
+            // 
+            // button1
+            // 
+            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.button1.ForeColor = System.Drawing.Color.Gainsboro;
+            this.button1.Image = global::PhanHe1.Properties.Resources.icons8_logout_48;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(0, 260);
+            this.button1.Name = "button1";
+            this.button1.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
+            this.button1.Size = new System.Drawing.Size(303, 60);
+            this.button1.TabIndex = 5;
+            this.button1.Text = " Đăng xuất";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.button3.ForeColor = System.Drawing.Color.Gainsboro;
+            this.button3.Image = global::PhanHe1.Properties.Resources.icons8_user_48;
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.Location = new System.Drawing.Point(0, 200);
+            this.button3.Name = "button3";
+            this.button3.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
+            this.button3.Size = new System.Drawing.Size(303, 60);
+            this.button3.TabIndex = 3;
+            this.button3.Text = " Placeholder";
+            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // btnPriv
+            // 
+            this.btnPriv.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPriv.FlatAppearance.BorderSize = 0;
+            this.btnPriv.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPriv.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btnPriv.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnPriv.Image = global::PhanHe1.Properties.Resources.icons8_privilege_48;
+            this.btnPriv.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPriv.Location = new System.Drawing.Point(0, 140);
+            this.btnPriv.Name = "btnPriv";
+            this.btnPriv.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
+            this.btnPriv.Size = new System.Drawing.Size(303, 60);
+            this.btnPriv.TabIndex = 2;
+            this.btnPriv.Text = " Quyền User/Role";
+            this.btnPriv.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPriv.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnPriv.UseVisualStyleBackColor = true;
+            this.btnPriv.Click += new System.EventHandler(this.btnPriv_Click);
+            // 
+            // btnList
+            // 
+            this.btnList.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnList.FlatAppearance.BorderSize = 0;
+            this.btnList.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnList.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btnList.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnList.Image = global::PhanHe1.Properties.Resources.icons8_list_48;
+            this.btnList.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnList.Location = new System.Drawing.Point(0, 80);
+            this.btnList.Name = "btnList";
+            this.btnList.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
+            this.btnList.Size = new System.Drawing.Size(303, 60);
+            this.btnList.TabIndex = 1;
+            this.btnList.Text = " Xem User/Role";
+            this.btnList.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnList.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnList.UseVisualStyleBackColor = true;
+            this.btnList.Click += new System.EventHandler(this.btnList_Click);
             // 
             // FormMainMenu
             // 

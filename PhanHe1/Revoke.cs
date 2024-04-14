@@ -1,15 +1,5 @@
-﻿using PhanHe1.DAO;
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System;
 using System.Windows.Forms;
-using PhanHe1.DAO;
 
 
 namespace PhanHe1
@@ -30,7 +20,7 @@ namespace PhanHe1
         private void button1_Click(object sender, EventArgs e)
         {
             string name = textBox1.Text.Trim();
-            string query = "select * form " + name + ";";
+            string query = "select * form " + name;
            
             //try
             //{
