@@ -31,16 +31,21 @@ namespace PhanHe1
         private void button1_Click(object sender, EventArgs e)
         {
             string name = textBox1.Text.Trim();
-            string query = "SELECT * FROM dba_tab_privs WHERE GRANTEE = '" + name + "'";
+            string query = "SELECT GRANTEE, OWNER, TABLE_NAME, COLUMN_NAME, GRANTOR, PRIVILEGE, GRANTABLE\r\n FROM dba_col_privs\r\n WHERE GRANTEE = '" + name + "'";
+            query += "UNION ALL\r\nSELECT GRANTEE, OWNER, TABLE_NAME, NULL AS COLUMN_NAME, GRANTOR, PRIVILEGE, GRANTABLE\r\nFROM dba_tab_privs\r\nWHERE GRANTEE = '" + name + "'";
+
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            
             string query_1 = "SELECT * FROM DBA_ROLE_PRIVS WHERE GRANTEE = '" + name + "'";
             dataGridView2.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
-
+           
             try
             {
                 // Lấy dữ liệu từ cơ sở dữ liệu và gán cho DataGridView
                 dataGridView1.DataSource = OracleDataProvider.Instance.ExecuteQuery(query);
+
                 dataGridView2.DataSource = OracleDataProvider.Instance.ExecuteQuery(query_1);
+
 
                 // Tạo một cột DataGridViewButtonColumn cho nút xóa
                 DataGridViewButtonColumn deleteButtonColumn = new DataGridViewButtonColumn();
@@ -49,6 +54,7 @@ namespace PhanHe1
                 deleteButtonColumn.Text = "🗑️";
                 deleteButtonColumn.UseColumnTextForButtonValue = true;
 
+                
                 // Thêm cột vào DataGridView1 nếu nó chưa tồn tại
                 if (!dataGridView1.Columns.Contains("DeleteButtonColumn"))
                 {
@@ -128,7 +134,9 @@ namespace PhanHe1
             
             // Thực hiện lại truy vấn để lấy dữ liệu mới từ cơ sở dữ liệu
             string name = textBox1.Text.Trim();
-            string query = "SELECT * FROM dba_tab_privs WHERE GRANTEE = '" + name + "'";
+            string query = "SELECT GRANTEE, OWNER, TABLE_NAME, COLUMN_NAME, GRANTOR, PRIVILEGE, GRANTABLE\r\n FROM dba_col_privs\r\n WHERE GRANTEE = '" + name + "'";
+            query += "UNION ALL\r\nSELECT GRANTEE, OWNER, TABLE_NAME, NULL AS COLUMN_NAME, GRANTOR, PRIVILEGE, GRANTABLE\r\nFROM dba_tab_privs\r\nWHERE GRANTEE = '" + name + "'";
+
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
 
             try
@@ -203,6 +211,11 @@ namespace PhanHe1
        
 
         private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Revoke_Load(object sender, EventArgs e)
         {
 
         }

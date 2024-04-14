@@ -90,7 +90,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(999, 240);
+            this.dataGridView1.Size = new System.Drawing.Size(999, 278);
             this.dataGridView1.TabIndex = 11;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -156,6 +156,7 @@
             this.Controls.Add(this.textBox1);
             this.Name = "Revoke";
             this.Text = "Revoke";
+            this.Load += new System.EventHandler(this.Revoke_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.panel1.ResumeLayout(false);

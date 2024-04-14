@@ -118,7 +118,7 @@ namespace PhanHe1
                 }
                 if (checkBoxU.Checked)
                 {
-                    spe_right += "SELECT, UPDATE";
+                    spe_right += "UPDATE";
                     col = textBoxForU.Text;
 
                 }
@@ -151,6 +151,7 @@ namespace PhanHe1
 
                         try
                         {
+                            
                             OracleDataProvider.Instance.ExecuteNonQuery(spe_grantQuery);
                             MessageBox.Show("Quyền đã được cấp thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
@@ -228,7 +229,7 @@ namespace PhanHe1
                 else
                 {
                     string grantQuery = "GRANT " + role + " TO " + name;
-                    MessageBox.Show(grantQuery);
+                    
                     try
                     {
                         OracleDataProvider.Instance.ExecuteNonQuery(grantQuery);
