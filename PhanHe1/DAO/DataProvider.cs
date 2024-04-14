@@ -6,23 +6,29 @@ using System.Text;
 using System.Threading.Tasks;
 using Oracle.ManagedDataAccess.Client;
 using System.Configuration;
+using System.DirectoryServices;
 
 namespace PhanHe1.DAO
 {
     public class OracleDataProvider
     {
         private static OracleDataProvider instance;
+        
         private static readonly object lockObject = new object();
-
+        
         //You can change the default connection string in app.config
         private static string _connectionString = ConfigurationManager.ConnectionStrings["con"].ConnectionString;
-      
+        public static string username;
         private OracleDataProvider(string connectionString)
         {
             _connectionString = connectionString;
+            username = UserName();
         }
 
-        private OracleDataProvider() { }
+        private OracleDataProvider() 
+        {
+            username = UserName();
+        }
 
         public static OracleDataProvider Instance
         {
@@ -40,15 +46,57 @@ namespace PhanHe1.DAO
             private set => OracleDataProvider.instance = value;
         }
 
-        public static void Initialize(string connectionString)
+        
+        public static OracleDataProvider Initialize(string connectionString)
         {
             if (instance != null)
             {
                 _connectionString = connectionString;
             }
             instance = new OracleDataProvider(connectionString);
+            return instance;
         }
 
+        public bool TestConnection()
+        {
+            try
+            {
+                using (OracleConnection conn = new OracleConnection(_connectionString))
+                {
+                    conn.Open();
+                    return true; // Connection successful
+                }
+            }
+            catch (OracleException)
+            {
+                return false; // Connection failed
+            }
+        }
+
+        private string UserName()
+        {
+            // Find the index of the substring "User Id =" in the connection string
+            int userIdIndex = _connectionString.IndexOf("User Id =");
+
+            // Check if the substring "User Id =" exists in the connection string
+            if (userIdIndex != -1)
+            {
+                // Add the length of "User Id =" to get the starting index of the username
+                userIdIndex += "User Id =".Length;
+
+                // Find the index of the next semicolon after the "User Id =" substring
+                int semicolonIndex = _connectionString.IndexOf(";", userIdIndex);
+
+                // Calculate the length of the username substring
+                int length = semicolonIndex - userIdIndex;
+
+                // Extract the username substring using Substring method
+                string username = _connectionString.Substring(userIdIndex, length);
+
+                return username;
+            }
+            return "";
+        }
         public DataTable ExecuteQuery(string sql, object[] parameters = null)
         {
             DataTable data = new DataTable();
@@ -111,6 +159,7 @@ namespace PhanHe1.DAO
 
             return rowsAffected;
         }
+
 
         public object ExecuteScalar(string sql, object[] parameters = null)
         {
