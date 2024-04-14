@@ -83,17 +83,7 @@ namespace PhanHe1.DAO
             return data;
         }
 
-        public void RunQuery(string sql)
-        {
-            using (OracleConnection connection = new OracleConnection(_connectionString))
-            {
-                connection.Open();
-
-                OracleCommand command = new OracleCommand(sql, connection);
-                connection.Close();
-            }
-        }
-
+     
 
         public int ExecuteNonQuery(string sql, object[] parameters = null)
         {

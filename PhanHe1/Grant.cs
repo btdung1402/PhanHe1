@@ -129,7 +129,7 @@ namespace PhanHe1
                     if (right != "")
                     {
                         grantQuery = "GRANT " + right + " ON sys." + table + " TO " + name + " " + option ;
-                       MessageBox.Show(grantQuery);
+                       //MessageBox.Show(grantQuery);
                         try
                         {
                             OracleDataProvider.Instance.ExecuteNonQuery(grantQuery);
@@ -145,7 +145,7 @@ namespace PhanHe1
                     if (spe_right != "" && col != "")
                     {
                         spe_grantQuery = "GRANT " + spe_right + " (" + col + ")" + " ON sys." + table + " TO " + name + " " + option;
-                        MessageBox.Show(spe_grantQuery);
+                        //MessageBox.Show(spe_grantQuery);
 
                         try
                         {
