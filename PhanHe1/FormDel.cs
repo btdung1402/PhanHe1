@@ -70,6 +70,16 @@ namespace PhanHe1
                 else
                     MessageBox.Show("Lỗi: " + ex.Message);
             }
+            if (mode == "USER")
+            {
+                query = $"select * from dba_users";
+                Load_Data(query);
+            }
+            if (mode == "ROLE")
+            {
+                query = $"select * from dba_roles";
+                Load_Data(query);
+            }
         }
 
         private void radioButtonUser_CheckedChanged(object sender, EventArgs e)
@@ -78,22 +88,8 @@ namespace PhanHe1
             {
                 mode = "USER";
                 string query = $"select * from dba_users";
-                try
-                {
-                    if (dataGridView2.DataSource != null) 
-                        dataGridView2.DataSource = null;
-                    dataGridView2.DataSource = OracleDataProvider.Instance.ExecuteQuery(query);
-                }
-                catch (OracleException ex)
-                {
-                    //  insufficient privileges
-                    if (ex.Number == 1031)
-                    {
-                        MessageBox.Show("Tài khoản không có đủ quyền.");
-                    }
-                    else
-                        MessageBox.Show("Lỗi: " + ex.Message);
-                }
+                Load_Data(query);
+                checkBox1.Enabled = true;
             }
             
         }
@@ -104,26 +100,32 @@ namespace PhanHe1
             {
                 mode = "ROLE";
                 string query = $"select * from dba_roles";
-                try
-                {
-                    if (dataGridView2.DataSource != null) dataGridView2.DataSource = null;
-                    dataGridView2.DataSource = OracleDataProvider.Instance.ExecuteQuery(query);
-                }
-                catch (OracleException ex)
-                {
-                    //  insufficient privileges
-                    if (ex.Number == 1031)
-                    {
-                        MessageBox.Show("Tài khoản không có đủ quyền.");
-                    }
-                    else
-                        MessageBox.Show("Lỗi: " + ex.Message);
-                }
+                Load_Data(query);
+                checkBox1.Checked = false;
+                checkBox1.Enabled = false;
             }
 
             
         }
 
+        private void Load_Data(string query)
+        {
+            try
+            {
+                if (dataGridView2.DataSource != null) dataGridView2.DataSource = null;
+                dataGridView2.DataSource = OracleDataProvider.Instance.ExecuteQuery(query);
+            }
+            catch (OracleException ex)
+            {
+                //  insufficient privileges
+                if (ex.Number == 1031)
+                {
+                    MessageBox.Show("Tài khoản không có đủ quyền.");
+                }
+                else
+                    MessageBox.Show("Lỗi: " + ex.Message);
+            }
+        }
 
     }
 }
