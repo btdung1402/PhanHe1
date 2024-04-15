@@ -126,7 +126,7 @@ namespace PhanHe1
 
 
                     // Hiển thị hộp thoại xác nhận xóa
-                    DialogResult result = MessageBox.Show("Bạn có chắc muốn xóa quyền cho '" + grantee + "' trên bảng '" + tableName + "' không?", "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    DialogResult result = MessageBox.Show("Bạn có chắc muốn xóa quyền '" + privilege + "' trên bảng '" + tableName + "' của '"+grantee+"' không?", "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
                     // Nếu người dùng xác nhận muốn xóa
                     if (result == DialogResult.Yes)
