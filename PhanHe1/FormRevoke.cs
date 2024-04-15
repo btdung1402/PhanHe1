@@ -152,7 +152,7 @@ namespace PhanHe1
         {
             
             // Thực hiện lại truy vấn để lấy dữ liệu mới từ cơ sở dữ liệu
-            string name = textBox1.Text.Trim();
+            string name = textBox1.Text.Trim().ToUpper();
             string query = "SELECT GRANTEE, OWNER, TABLE_NAME, COLUMN_NAME, GRANTOR, PRIVILEGE, GRANTABLE\r\n FROM dba_col_privs\r\n WHERE GRANTEE = '" + name + "'";
             query += "UNION ALL\r\nSELECT GRANTEE, OWNER, TABLE_NAME, NULL AS COLUMN_NAME, GRANTOR, PRIVILEGE, GRANTABLE\r\nFROM dba_tab_privs\r\nWHERE GRANTEE = '" + name + "'";
 
@@ -197,7 +197,7 @@ namespace PhanHe1
         }
         private void RefreshDataGridView2()
         {
-            string name = textBox1.Text.Trim();
+            string name = textBox1.Text.Trim().ToUpper();
             string query = "SELECT * FROM DBA_ROLE_PRIVS WHERE GRANTEE = '" + name + "'";
             dataGridView2.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
 
@@ -211,5 +211,14 @@ namespace PhanHe1
             }
         }
 
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FormRevoke_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

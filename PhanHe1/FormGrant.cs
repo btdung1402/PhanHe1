@@ -102,7 +102,7 @@ namespace PhanHe1
                 if (checkBoxU.Checked)
                 {
                     spe_right += "UPDATE";
-                    col = textBoxForU.Text;
+                    col = textBox1.Text;
 
                 }
 
@@ -127,26 +127,30 @@ namespace PhanHe1
                         }
 
                     }
-                    if (spe_right != "" && col != "")
+                    if(spe_right != "")
                     {
-                        spe_grantQuery = "GRANT " + spe_right + " (" + col + ")" + " ON sys." + table + " TO " + name + " " + option;
-                        //MessageBox.Show(spe_grantQuery);
+                        if (col != "" )
+                        {
+                            spe_grantQuery = "GRANT " + spe_right + " (" + col + ")" + " ON sys." + table + " TO " + name + " " + option;
+                            //MessageBox.Show(spe_grantQuery);
 
-                        try
-                        {
-                            
-                            OracleDataProvider.Instance.ExecuteNonQuery(spe_grantQuery);
-                            MessageBox.Show("Quyền đã được cấp thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            try
+                            {
+
+                                OracleDataProvider.Instance.ExecuteNonQuery(spe_grantQuery);
+                                MessageBox.Show("Quyền đã được cấp thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            }
+                            catch (Exception ex)
+                            {
+                                MessageBox.Show($"Lỗi: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
                         }
-                        catch (Exception ex)
+                        else
                         {
-                            MessageBox.Show($"Lỗi: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show("Vui lòng nhập cột muốn cấp quyền.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                     }
-                    else if (spe_right != "")
-                    {
-                        MessageBox.Show("Vui lòng nhập cột muốn cấp quyền.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
+                 
                 }
                 else
                 {
@@ -208,6 +212,11 @@ namespace PhanHe1
                     }
                 }
             }
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
