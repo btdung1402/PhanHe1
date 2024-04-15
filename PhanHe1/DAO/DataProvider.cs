@@ -13,23 +13,15 @@ namespace PhanHe1.DAO
 {
     public class OracleDataProvider
     {
-        private static OracleDataProvider instance;
+        private static OracleDataProvider instance = null;
         
         private static readonly object lockObject = new object();
         
         //You can change the default connection string in app.config
         private static string _connectionString = ConfigurationManager.ConnectionStrings["con"].ConnectionString;
         public static string username;
-        private OracleDataProvider(string connectionString)
-        {
-            _connectionString = connectionString;
-            username = UserName();
-        }
 
-        private OracleDataProvider() 
-        {
-            username = UserName();
-        }
+        private OracleDataProvider()   {     }
 
         public static OracleDataProvider Instance
         {
@@ -48,14 +40,10 @@ namespace PhanHe1.DAO
         }
 
         
-        public static OracleDataProvider Initialize(string connectionString)
+        public static void Initialize(string connectionString)
         {
-            if (instance != null)
-            {
-                _connectionString = connectionString;
-            }
-            instance = new OracleDataProvider(connectionString);
-            return instance;
+            _connectionString = connectionString;
+            username = UserName();
         }
 
         public bool TestConnection()
@@ -74,7 +62,7 @@ namespace PhanHe1.DAO
             }
         }
 
-        private string UserName()
+        public static string UserName()
         {
             // Find the index of the substring "User Id =" in the connection string
             int userIdIndex = _connectionString.IndexOf("User Id =");

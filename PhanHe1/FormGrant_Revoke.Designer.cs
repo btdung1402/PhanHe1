@@ -104,7 +104,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CadetBlue;
-            this.ClientSize = new System.Drawing.Size(857, 504);
+            this.ClientSize = new System.Drawing.Size(890, 504);
             this.Controls.Add(this.panelExecuteGR);
             this.Controls.Add(this.radPanel);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);

@@ -50,8 +50,8 @@ namespace PhanHe1
         private void button1_Click(object sender, EventArgs e)
         {
             string name = textBox1.Text.Trim().ToUpper();
-            string query = "SELECT GRANTEE, OWNER, TABLE_NAME, PRIVILEGE, GRANTOR, COLUMN_NAME, GRANTABLE\r\n FROM dba_col_privs\r\n WHERE GRANTEE = '" + name + "'";
-            query += "UNION ALL\r\nSELECT GRANTEE, OWNER, TABLE_NAME, PRIVILEGE, GRANTOR, NULL AS COLUMN_NAME, GRANTABLE\r\nFROM dba_tab_privs\r\nWHERE GRANTEE = '" + name + "'";
+            string query = "SELECT GRANTEE, OWNER, TABLE_NAME, PRIVILEGE, COLUMN_NAME, GRANTOR, GRANTABLE\r\n FROM dba_col_privs\r\n WHERE GRANTEE = '" + name + "'";
+            query += "UNION ALL\r\nSELECT GRANTEE, OWNER, TABLE_NAME, PRIVILEGE, NULL AS COLUMN_NAME, GRANTOR , GRANTABLE\r\nFROM dba_tab_privs\r\nWHERE GRANTEE = '" + name + "'";
 
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
             
@@ -153,9 +153,8 @@ namespace PhanHe1
             
             // Thực hiện lại truy vấn để lấy dữ liệu mới từ cơ sở dữ liệu
             string name = textBox1.Text.Trim().ToUpper();
-            string query = "SELECT GRANTEE, OWNER, TABLE_NAME, PRIVILEGE, GRANTOR, COLUMN_NAME, GRANTABLE\r\n FROM dba_col_privs\r\n WHERE GRANTEE = '" + name + "'";
-            query += "UNION ALL\r\nSELECT GRANTEE, OWNER, TABLE_NAME, PRIVILEGE, GRANTOR, NULL AS COLUMN_NAME, GRANTABLE\r\nFROM dba_tab_privs\r\nWHERE GRANTEE = '" + name + "'";
-
+            string query = "SELECT GRANTEE, OWNER, TABLE_NAME, PRIVILEGE, COLUMN_NAME, GRANTOR, GRANTABLE\r\n FROM dba_col_privs\r\n WHERE GRANTEE = '" + name + "'";
+            query += "UNION ALL\r\nSELECT GRANTEE, OWNER, TABLE_NAME, PRIVILEGE, NULL AS COLUMN_NAME, GRANTOR , GRANTABLE\r\nFROM dba_tab_privs\r\nWHERE GRANTEE = '" + name + "'";
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
 
             try
