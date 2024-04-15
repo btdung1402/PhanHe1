@@ -127,7 +127,7 @@
             // 
             this.lblExit.AutoSize = true;
             this.lblExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblExit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(117)))), ((int)(((byte)(214)))));
+            this.lblExit.ForeColor = System.Drawing.Color.IndianRed;
             this.lblExit.Location = new System.Drawing.Point(252, 434);
             this.lblExit.Name = "lblExit";
             this.lblExit.Size = new System.Drawing.Size(56, 20);
