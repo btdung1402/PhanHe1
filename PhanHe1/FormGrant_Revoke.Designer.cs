@@ -96,7 +96,7 @@
             this.panelExecuteGR.Location = new System.Drawing.Point(12, 81);
             this.panelExecuteGR.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelExecuteGR.Name = "panelExecuteGR";
-            this.panelExecuteGR.Size = new System.Drawing.Size(833, 394);
+            this.panelExecuteGR.Size = new System.Drawing.Size(833, 412);
             this.panelExecuteGR.TabIndex = 1;
             // 
             // FormGrant_Revoke
@@ -109,7 +109,7 @@
             this.Controls.Add(this.radPanel);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormGrant_Revoke";
-            this.Text = "Form2";
+            this.Text = "Trao/Tước quyền";
             this.radPanel.ResumeLayout(false);
             this.radPanel.PerformLayout();
             this.ResumeLayout(false);

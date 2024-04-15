@@ -183,22 +183,17 @@ namespace PhanHe1
 
         private void btnLogOut_Click(object sender, EventArgs e)
         {
-            lblTitle.Location = oldP;
-            using (new CenterWinDialog(this))
-            {
-                DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn đăng xuất?", "Xác thực đăng xuất", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
-                if (result == DialogResult.Yes)
-                {
-                    _relog = true;
-                    this.Close();
-                }
-            }
 
         }
 
         private void btnGrantRevoke_Click(object sender, EventArgs e)
         {
             OpenChildForm(new FormGrant_Revoke(),sender);
+        }
+
+        private void btnDel_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FormDel(), sender);
         }
     }
 }

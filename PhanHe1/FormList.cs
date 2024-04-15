@@ -34,8 +34,14 @@ namespace PhanHe1
         }
         private void btnDelData_Click(object sender, EventArgs e)
         {
-            if (dtgv.DataSource != null) dtgv.DataSource = null;
-        }
+            if (dtgv.DataSource != null)
+            {
+                dtgv.DataSource = null;
+                btnAddUser.Enabled = false;
+                btnSearch.Enabled = false;
+                btnLockUnlock.Enabled = false;
+            }
+            }
         private void Load_Data(string query = null)
         {
             if (query == null)
@@ -44,6 +50,9 @@ namespace PhanHe1
                               "TO_CHAR(created, 'DD-MM-YYYY') as created_date, " +
                               "TO_CHAR(expiry_date, 'DD-MM-YYYY') as expiry_date, " +
                               "TO_CHAR(last_login,'DD-MM-YYYY, HH:MI:SS') as last_login from dba_users";
+                btnAddUser.Enabled = true;
+                btnSearch.Enabled = true;
+                btnLockUnlock.Enabled = true;
             }
             try
             {
@@ -144,6 +153,16 @@ namespace PhanHe1
         {
             FormChangePassword f = new FormChangePassword();
             f.Show();
+        }
+
+        private void btnRole_Click(object sender, EventArgs e)
+        {
+            string query = $"SELECT * FROM DBA_ROLES";
+            Load_Data(query);
+            btnAddUser.Enabled = false;
+            btnSearch.Enabled = false;
+            btnLockUnlock.Enabled = false;
+            
         }
     }
 }

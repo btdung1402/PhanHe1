@@ -50,7 +50,7 @@ namespace PhanHe1
         private void button1_Click(object sender, EventArgs e)
         {
             string name = textBox1.Text.Trim().ToUpper();
-            string query = "SELECT GRANTEE, OWNER, TABLE_NAME, COLUMN_NAME, GRANTOR, PRIVILEGE, GRANTABLE\r\n FROM dba_col_privs\r\n WHERE GRANTEE = '" + name + "'";
+            string query = "SELECT GRANTEE, OWNER, TABLE_NAME, PRIVILEGE, COLUMN_NAME, GRANTOR, GRANTABLE\r\n FROM dba_col_privs\r\n WHERE GRANTEE = '" + name + "'";
             query += "UNION ALL\r\nSELECT GRANTEE, OWNER, TABLE_NAME, NULL AS COLUMN_NAME, GRANTOR, PRIVILEGE, GRANTABLE\r\nFROM dba_tab_privs\r\nWHERE GRANTEE = '" + name + "'";
 
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
@@ -126,7 +126,7 @@ namespace PhanHe1
 
 
                     // Hiển thị hộp thoại xác nhận xóa
-                    DialogResult result = MessageBox.Show("Bạn có chắc muốn xóa quyền cho '" + grantee + "' trên bảng '" + tableName + "' không?", "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    DialogResult result = MessageBox.Show("Bạn có chắc muốn xóa quyền '" + privilege + "' trên bảng '" + tableName + "' của '"+grantee+"' không?", "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
                     // Nếu người dùng xác nhận muốn xóa
                     if (result == DialogResult.Yes)

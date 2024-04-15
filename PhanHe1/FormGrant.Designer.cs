@@ -65,9 +65,9 @@
             this.Grantfor.AutoSize = true;
             this.Grantfor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Grantfor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(122)))), ((int)(((byte)(125)))));
-            this.Grantfor.Location = new System.Drawing.Point(55, 9);
+            this.Grantfor.Location = new System.Drawing.Point(49, 7);
             this.Grantfor.Name = "Grantfor";
-            this.Grantfor.Size = new System.Drawing.Size(60, 29);
+            this.Grantfor.Size = new System.Drawing.Size(52, 25);
             this.Grantfor.TabIndex = 0;
             this.Grantfor.Text = "Cấp";
             // 
@@ -76,10 +76,10 @@
             this.radioButtonRole.AutoSize = true;
             this.radioButtonRole.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButtonRole.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(122)))), ((int)(((byte)(125)))));
-            this.radioButtonRole.Location = new System.Drawing.Point(393, 11);
+            this.radioButtonRole.Location = new System.Drawing.Point(349, 9);
             this.radioButtonRole.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioButtonRole.Name = "radioButtonRole";
-            this.radioButtonRole.Size = new System.Drawing.Size(197, 29);
+            this.radioButtonRole.Size = new System.Drawing.Size(157, 24);
             this.radioButtonRole.TabIndex = 2;
             this.radioButtonRole.Text = "Quyền cho role";
             this.radioButtonRole.UseVisualStyleBackColor = true;
@@ -90,10 +90,10 @@
             this.radioButtonRU.AutoSize = true;
             this.radioButtonRU.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButtonRU.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(122)))), ((int)(((byte)(125)))));
-            this.radioButtonRU.Location = new System.Drawing.Point(650, 11);
+            this.radioButtonRU.Location = new System.Drawing.Point(578, 9);
             this.radioButtonRU.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioButtonRU.Name = "radioButtonRU";
-            this.radioButtonRU.Size = new System.Drawing.Size(183, 29);
+            this.radioButtonRU.Size = new System.Drawing.Size(147, 24);
             this.radioButtonRU.TabIndex = 3;
             this.radioButtonRU.Text = "Role cho user";
             this.radioButtonRU.UseVisualStyleBackColor = true;
@@ -104,9 +104,9 @@
             this.labelNameG.AutoSize = true;
             this.labelNameG.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNameG.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(122)))), ((int)(((byte)(125)))));
-            this.labelNameG.Location = new System.Drawing.Point(29, 56);
+            this.labelNameG.Location = new System.Drawing.Point(26, 45);
             this.labelNameG.Name = "labelNameG";
-            this.labelNameG.Size = new System.Drawing.Size(108, 25);
+            this.labelNameG.Size = new System.Drawing.Size(86, 20);
             this.labelNameG.TabIndex = 4;
             this.labelNameG.Text = "Tên User";
             // 
@@ -114,10 +114,10 @@
             // 
             this.textNameG.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textNameG.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(122)))), ((int)(((byte)(125)))));
-            this.textNameG.Location = new System.Drawing.Point(33, 94);
+            this.textNameG.Location = new System.Drawing.Point(29, 75);
             this.textNameG.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textNameG.Name = "textNameG";
-            this.textNameG.Size = new System.Drawing.Size(335, 30);
+            this.textNameG.Size = new System.Drawing.Size(298, 26);
             this.textNameG.TabIndex = 5;
             // 
             // radioButtonUser
@@ -126,10 +126,10 @@
             this.radioButtonUser.Checked = true;
             this.radioButtonUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButtonUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(122)))), ((int)(((byte)(125)))));
-            this.radioButtonUser.Location = new System.Drawing.Point(136, 11);
+            this.radioButtonUser.Location = new System.Drawing.Point(121, 9);
             this.radioButtonUser.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioButtonUser.Name = "radioButtonUser";
-            this.radioButtonUser.Size = new System.Drawing.Size(203, 29);
+            this.radioButtonUser.Size = new System.Drawing.Size(162, 24);
             this.radioButtonUser.TabIndex = 6;
             this.radioButtonUser.TabStop = true;
             this.radioButtonUser.Text = "Quyền cho user";
@@ -141,10 +141,10 @@
             this.checkBoxOpion.AutoSize = true;
             this.checkBoxOpion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBoxOpion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(122)))), ((int)(((byte)(125)))));
-            this.checkBoxOpion.Location = new System.Drawing.Point(12, 19);
+            this.checkBoxOpion.Location = new System.Drawing.Point(11, 15);
             this.checkBoxOpion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkBoxOpion.Name = "checkBoxOpion";
-            this.checkBoxOpion.Size = new System.Drawing.Size(213, 29);
+            this.checkBoxOpion.Size = new System.Drawing.Size(171, 24);
             this.checkBoxOpion.TabIndex = 7;
             this.checkBoxOpion.Text = "with grant option";
             this.checkBoxOpion.UseVisualStyleBackColor = true;
@@ -156,10 +156,10 @@
             this.panelOption.Controls.Add(this.checkBoxD);
             this.panelOption.Controls.Add(this.checkBoxI);
             this.panelOption.Controls.Add(this.labelOption);
-            this.panelOption.Location = new System.Drawing.Point(11, 66);
+            this.panelOption.Location = new System.Drawing.Point(10, 53);
             this.panelOption.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelOption.Name = "panelOption";
-            this.panelOption.Size = new System.Drawing.Size(843, 71);
+            this.panelOption.Size = new System.Drawing.Size(749, 57);
             this.panelOption.TabIndex = 8;
             // 
             // checkBoxU
@@ -167,10 +167,10 @@
             this.checkBoxU.AutoSize = true;
             this.checkBoxU.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBoxU.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(122)))), ((int)(((byte)(125)))));
-            this.checkBoxU.Location = new System.Drawing.Point(646, 22);
+            this.checkBoxU.Location = new System.Drawing.Point(574, 18);
             this.checkBoxU.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkBoxU.Name = "checkBoxU";
-            this.checkBoxU.Size = new System.Drawing.Size(123, 33);
+            this.checkBoxU.Size = new System.Drawing.Size(103, 29);
             this.checkBoxU.TabIndex = 4;
             this.checkBoxU.Text = "Update";
             this.checkBoxU.UseVisualStyleBackColor = true;
@@ -181,10 +181,10 @@
             this.checkBoxS.AutoSize = true;
             this.checkBoxS.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBoxS.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(122)))), ((int)(((byte)(125)))));
-            this.checkBoxS.Location = new System.Drawing.Point(496, 22);
+            this.checkBoxS.Location = new System.Drawing.Point(441, 18);
             this.checkBoxS.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkBoxS.Name = "checkBoxS";
-            this.checkBoxS.Size = new System.Drawing.Size(113, 33);
+            this.checkBoxS.Size = new System.Drawing.Size(95, 29);
             this.checkBoxS.TabIndex = 3;
             this.checkBoxS.Text = "Select";
             this.checkBoxS.UseVisualStyleBackColor = true;
@@ -194,10 +194,10 @@
             this.checkBoxD.AutoSize = true;
             this.checkBoxD.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBoxD.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(122)))), ((int)(((byte)(125)))));
-            this.checkBoxD.Location = new System.Drawing.Point(349, 22);
+            this.checkBoxD.Location = new System.Drawing.Point(310, 18);
             this.checkBoxD.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkBoxD.Name = "checkBoxD";
-            this.checkBoxD.Size = new System.Drawing.Size(116, 33);
+            this.checkBoxD.Size = new System.Drawing.Size(96, 29);
             this.checkBoxD.TabIndex = 2;
             this.checkBoxD.Text = "Delete";
             this.checkBoxD.UseVisualStyleBackColor = true;
@@ -207,10 +207,10 @@
             this.checkBoxI.AutoSize = true;
             this.checkBoxI.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBoxI.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(122)))), ((int)(((byte)(125)))));
-            this.checkBoxI.Location = new System.Drawing.Point(207, 22);
+            this.checkBoxI.Location = new System.Drawing.Point(184, 18);
             this.checkBoxI.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkBoxI.Name = "checkBoxI";
-            this.checkBoxI.Size = new System.Drawing.Size(104, 33);
+            this.checkBoxI.Size = new System.Drawing.Size(88, 29);
             this.checkBoxI.TabIndex = 1;
             this.checkBoxI.Text = "Insert";
             this.checkBoxI.UseVisualStyleBackColor = true;
@@ -220,9 +220,9 @@
             this.labelOption.AutoSize = true;
             this.labelOption.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelOption.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(122)))), ((int)(((byte)(125)))));
-            this.labelOption.Location = new System.Drawing.Point(-4, 24);
+            this.labelOption.Location = new System.Drawing.Point(-4, 19);
             this.labelOption.Name = "labelOption";
-            this.labelOption.Size = new System.Drawing.Size(165, 29);
+            this.labelOption.Size = new System.Drawing.Size(142, 25);
             this.labelOption.TabIndex = 0;
             this.labelOption.Text = "Chọn quyền: ";
             // 
@@ -231,9 +231,9 @@
             this.labelTable.AutoSize = true;
             this.labelTable.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTable.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(122)))), ((int)(((byte)(125)))));
-            this.labelTable.Location = new System.Drawing.Point(7, 170);
+            this.labelTable.Location = new System.Drawing.Point(6, 136);
             this.labelTable.Name = "labelTable";
-            this.labelTable.Size = new System.Drawing.Size(116, 29);
+            this.labelTable.Size = new System.Drawing.Size(96, 25);
             this.labelTable.TabIndex = 9;
             this.labelTable.Text = "Tên bảng";
             // 
@@ -241,10 +241,10 @@
             // 
             this.textBoxTable.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxTable.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(122)))), ((int)(((byte)(125)))));
-            this.textBoxTable.Location = new System.Drawing.Point(127, 171);
+            this.textBoxTable.Location = new System.Drawing.Point(113, 137);
             this.textBoxTable.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxTable.Name = "textBoxTable";
-            this.textBoxTable.Size = new System.Drawing.Size(576, 30);
+            this.textBoxTable.Size = new System.Drawing.Size(512, 26);
             this.textBoxTable.TabIndex = 10;
             // 
             // buttonGrant
@@ -253,12 +253,12 @@
             this.buttonGrant.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(122)))), ((int)(((byte)(125)))));
             this.buttonGrant.FlatAppearance.BorderSize = 0;
             this.buttonGrant.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonGrant.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonGrant.Font = new System.Drawing.Font("Roboto", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonGrant.ForeColor = System.Drawing.Color.White;
-            this.buttonGrant.Location = new System.Drawing.Point(717, 175);
+            this.buttonGrant.Location = new System.Drawing.Point(629, 173);
             this.buttonGrant.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonGrant.Name = "buttonGrant";
-            this.buttonGrant.Size = new System.Drawing.Size(179, 95);
+            this.buttonGrant.Size = new System.Drawing.Size(137, 30);
             this.buttonGrant.TabIndex = 11;
             this.buttonGrant.Text = "Thực hiện cấp";
             this.buttonGrant.UseVisualStyleBackColor = false;
@@ -271,7 +271,7 @@
             this.textBoxForU.Location = new System.Drawing.Point(88, 133);
             this.textBoxForU.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxForU.Name = "textBoxForU";
-            this.textBoxForU.Size = new System.Drawing.Size(288, 30);
+            this.textBoxForU.Size = new System.Drawing.Size(288, 26);
             this.textBoxForU.TabIndex = 13;
             // 
             // labelForU
@@ -293,20 +293,20 @@
             this.panelNotRU.Controls.Add(this.panelOption);
             this.panelNotRU.Controls.Add(this.labelTable);
             this.panelNotRU.Controls.Add(this.textBoxTable);
-            this.panelNotRU.Location = new System.Drawing.Point(21, 139);
+            this.panelNotRU.Location = new System.Drawing.Point(19, 111);
             this.panelNotRU.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelNotRU.Name = "panelNotRU";
-            this.panelNotRU.Size = new System.Drawing.Size(872, 289);
+            this.panelNotRU.Size = new System.Drawing.Size(775, 231);
             this.panelNotRU.TabIndex = 13;
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(11, 218);
+            this.panel1.Location = new System.Drawing.Point(10, 174);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(692, 52);
+            this.panel1.Size = new System.Drawing.Size(615, 42);
             this.panel1.TabIndex = 15;
             this.panel1.Visible = false;
             // 
@@ -314,10 +314,10 @@
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(122)))), ((int)(((byte)(125)))));
-            this.textBox1.Location = new System.Drawing.Point(116, 2);
+            this.textBox1.Location = new System.Drawing.Point(103, 2);
             this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(572, 31);
+            this.textBox1.Size = new System.Drawing.Size(509, 27);
             this.textBox1.TabIndex = 13;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -326,9 +326,9 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(122)))), ((int)(((byte)(125)))));
-            this.label1.Location = new System.Drawing.Point(3, 5);
+            this.label1.Location = new System.Drawing.Point(3, 4);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(94, 29);
+            this.label1.Size = new System.Drawing.Size(78, 25);
             this.label1.TabIndex = 13;
             this.label1.Text = "Tên cột";
             // 
@@ -337,10 +337,10 @@
             this.panel2.Controls.Add(this.buttonRU);
             this.panel2.Controls.Add(this.textBoxRU);
             this.panel2.Controls.Add(this.labelRU);
-            this.panel2.Location = new System.Drawing.Point(393, 44);
+            this.panel2.Location = new System.Drawing.Point(349, 35);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(490, 90);
+            this.panel2.Size = new System.Drawing.Size(445, 72);
             this.panel2.TabIndex = 14;
             this.panel2.Visible = false;
             // 
@@ -350,12 +350,12 @@
             this.buttonRU.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(122)))), ((int)(((byte)(125)))));
             this.buttonRU.FlatAppearance.BorderSize = 0;
             this.buttonRU.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonRU.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonRU.Font = new System.Drawing.Font("Roboto", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonRU.ForeColor = System.Drawing.Color.White;
-            this.buttonRU.Location = new System.Drawing.Point(345, 12);
+            this.buttonRU.Location = new System.Drawing.Point(292, 36);
             this.buttonRU.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonRU.Name = "buttonRU";
-            this.buttonRU.Size = new System.Drawing.Size(179, 70);
+            this.buttonRU.Size = new System.Drawing.Size(137, 30);
             this.buttonRU.TabIndex = 13;
             this.buttonRU.Text = "Thực hiện cấp";
             this.buttonRU.UseVisualStyleBackColor = false;
@@ -365,10 +365,10 @@
             // 
             this.textBoxRU.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxRU.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(122)))), ((int)(((byte)(125)))));
-            this.textBoxRU.Location = new System.Drawing.Point(18, 50);
+            this.textBoxRU.Location = new System.Drawing.Point(16, 40);
             this.textBoxRU.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxRU.Name = "textBoxRU";
-            this.textBoxRU.Size = new System.Drawing.Size(290, 30);
+            this.textBoxRU.Size = new System.Drawing.Size(258, 26);
             this.textBoxRU.TabIndex = 15;
             // 
             // labelRU
@@ -376,18 +376,18 @@
             this.labelRU.AutoSize = true;
             this.labelRU.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelRU.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(122)))), ((int)(((byte)(125)))));
-            this.labelRU.Location = new System.Drawing.Point(14, 12);
+            this.labelRU.Location = new System.Drawing.Point(12, 10);
             this.labelRU.Name = "labelRU";
-            this.labelRU.Size = new System.Drawing.Size(107, 25);
+            this.labelRU.Size = new System.Drawing.Size(84, 20);
             this.labelRU.TabIndex = 15;
             this.labelRU.Text = "Tên Role";
             // 
             // FormGrant
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(907, 422);
+            this.ClientSize = new System.Drawing.Size(806, 338);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panelNotRU);
             this.Controls.Add(this.radioButtonUser);

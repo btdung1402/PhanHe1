@@ -29,23 +29,24 @@
         private void InitializeComponent()
         {
             this.panelMenu = new System.Windows.Forms.Panel();
-            this.btnLogOut = new System.Windows.Forms.Button();
-            this.btnGrantRevoke = new System.Windows.Forms.Button();
-            this.btnPriv = new System.Windows.Forms.Button();
-            this.btnList = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panelTitleBar = new System.Windows.Forms.Panel();
             this.btnMinimine = new System.Windows.Forms.Button();
             this.btnMaximine = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
-            this.btnCloseChildForm = new System.Windows.Forms.Button();
             this.lblTitle = new System.Windows.Forms.Label();
             this.panelDesktop = new System.Windows.Forms.Panel();
             this.lblGroupName = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblUser = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnCloseChildForm = new System.Windows.Forms.Button();
+            this.btnLogout = new System.Windows.Forms.Button();
+            this.btnDel = new System.Windows.Forms.Button();
+            this.btnGrantRevoke = new System.Windows.Forms.Button();
+            this.btnPriv = new System.Windows.Forms.Button();
+            this.btnList = new System.Windows.Forms.Button();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             this.panelTitleBar.SuspendLayout();
@@ -56,7 +57,8 @@
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.panelMenu.Controls.Add(this.btnLogOut);
+            this.panelMenu.Controls.Add(this.btnLogout);
+            this.panelMenu.Controls.Add(this.btnDel);
             this.panelMenu.Controls.Add(this.btnGrantRevoke);
             this.panelMenu.Controls.Add(this.btnPriv);
             this.panelMenu.Controls.Add(this.btnList);
@@ -67,90 +69,6 @@
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(303, 553);
             this.panelMenu.TabIndex = 0;
-            // 
-            // btnLogOut
-            // 
-            this.btnLogOut.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnLogOut.FlatAppearance.BorderSize = 0;
-            this.btnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnLogOut.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnLogOut.Image = global::PhanHe1.Properties.Resources.icons8_logout_48;
-            this.btnLogOut.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLogOut.Location = new System.Drawing.Point(0, 260);
-            this.btnLogOut.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnLogOut.Name = "btnLogOut";
-            this.btnLogOut.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-            this.btnLogOut.Size = new System.Drawing.Size(303, 60);
-            this.btnLogOut.TabIndex = 8;
-            this.btnLogOut.Text = " Đăng xuất";
-            this.btnLogOut.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLogOut.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnLogOut.UseVisualStyleBackColor = true;
-            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
-            // 
-            // btnGrantRevoke
-            // 
-            this.btnGrantRevoke.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnGrantRevoke.FlatAppearance.BorderSize = 0;
-            this.btnGrantRevoke.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGrantRevoke.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnGrantRevoke.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnGrantRevoke.Image = global::PhanHe1.Properties.Resources.icons8_grant_48;
-            this.btnGrantRevoke.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGrantRevoke.Location = new System.Drawing.Point(0, 200);
-            this.btnGrantRevoke.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnGrantRevoke.Name = "btnGrantRevoke";
-            this.btnGrantRevoke.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-            this.btnGrantRevoke.Size = new System.Drawing.Size(303, 60);
-            this.btnGrantRevoke.TabIndex = 3;
-            this.btnGrantRevoke.Text = " Trao/Tước quyền";
-            this.btnGrantRevoke.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGrantRevoke.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnGrantRevoke.UseVisualStyleBackColor = true;
-            this.btnGrantRevoke.Click += new System.EventHandler(this.btnGrantRevoke_Click);
-            // 
-            // btnPriv
-            // 
-            this.btnPriv.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnPriv.FlatAppearance.BorderSize = 0;
-            this.btnPriv.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPriv.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnPriv.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnPriv.Image = global::PhanHe1.Properties.Resources.icons8_privilege_48;
-            this.btnPriv.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPriv.Location = new System.Drawing.Point(0, 140);
-            this.btnPriv.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnPriv.Name = "btnPriv";
-            this.btnPriv.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-            this.btnPriv.Size = new System.Drawing.Size(303, 60);
-            this.btnPriv.TabIndex = 2;
-            this.btnPriv.Text = " Quyền User/Role";
-            this.btnPriv.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPriv.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnPriv.UseVisualStyleBackColor = true;
-            this.btnPriv.Click += new System.EventHandler(this.btnPriv_Click);
-            // 
-            // btnList
-            // 
-            this.btnList.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnList.FlatAppearance.BorderSize = 0;
-            this.btnList.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnList.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnList.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnList.Image = global::PhanHe1.Properties.Resources.icons8_list_48;
-            this.btnList.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnList.Location = new System.Drawing.Point(0, 80);
-            this.btnList.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnList.Name = "btnList";
-            this.btnList.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-            this.btnList.Size = new System.Drawing.Size(303, 60);
-            this.btnList.TabIndex = 1;
-            this.btnList.Text = " Xem tất cả User";
-            this.btnList.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnList.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnList.UseVisualStyleBackColor = true;
-            this.btnList.Click += new System.EventHandler(this.btnList_Click);
             // 
             // panelLogo
             // 
@@ -236,20 +154,6 @@
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // btnCloseChildForm
-            // 
-            this.btnCloseChildForm.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnCloseChildForm.FlatAppearance.BorderSize = 0;
-            this.btnCloseChildForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCloseChildForm.Image = global::PhanHe1.Properties.Resources.icons8_x_48;
-            this.btnCloseChildForm.Location = new System.Drawing.Point(0, 0);
-            this.btnCloseChildForm.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnCloseChildForm.Name = "btnCloseChildForm";
-            this.btnCloseChildForm.Size = new System.Drawing.Size(75, 80);
-            this.btnCloseChildForm.TabIndex = 1;
-            this.btnCloseChildForm.UseVisualStyleBackColor = true;
-            this.btnCloseChildForm.Click += new System.EventHandler(this.btnCloseChildForm_Click);
-            // 
             // lblTitle
             // 
             this.lblTitle.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -286,17 +190,6 @@
             this.lblGroupName.TabIndex = 10;
             this.lblGroupName.Text = "Thực hiện bởi Nhóm 11";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::PhanHe1.Properties.Resources.icons8_customs_officer_78;
-            this.pictureBox1.Location = new System.Drawing.Point(171, 180);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(193, 146);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 9;
-            this.pictureBox1.TabStop = false;
-            // 
             // lblUser
             // 
             this.lblUser.AutoSize = true;
@@ -316,6 +209,136 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(280, 1);
             this.panel1.TabIndex = 7;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::PhanHe1.Properties.Resources.icons8_customs_officer_78;
+            this.pictureBox1.Location = new System.Drawing.Point(171, 180);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(193, 146);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btnCloseChildForm
+            // 
+            this.btnCloseChildForm.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnCloseChildForm.FlatAppearance.BorderSize = 0;
+            this.btnCloseChildForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCloseChildForm.Image = global::PhanHe1.Properties.Resources.icons8_x_48;
+            this.btnCloseChildForm.Location = new System.Drawing.Point(0, 0);
+            this.btnCloseChildForm.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCloseChildForm.Name = "btnCloseChildForm";
+            this.btnCloseChildForm.Size = new System.Drawing.Size(75, 80);
+            this.btnCloseChildForm.TabIndex = 1;
+            this.btnCloseChildForm.UseVisualStyleBackColor = true;
+            this.btnCloseChildForm.Click += new System.EventHandler(this.btnCloseChildForm_Click);
+            // 
+            // btnLogout
+            // 
+            this.btnLogout.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnLogout.FlatAppearance.BorderSize = 0;
+            this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btnLogout.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnLogout.Image = global::PhanHe1.Properties.Resources.icons8_logout_48;
+            this.btnLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLogout.Location = new System.Drawing.Point(0, 320);
+            this.btnLogout.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
+            this.btnLogout.Size = new System.Drawing.Size(303, 60);
+            this.btnLogout.TabIndex = 9;
+            this.btnLogout.Text = " Đăng xuất";
+            this.btnLogout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLogout.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogOut_Click);
+            // 
+            // btnDel
+            // 
+            this.btnDel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnDel.FlatAppearance.BorderSize = 0;
+            this.btnDel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btnDel.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnDel.Image = global::PhanHe1.Properties.Resources.icons8_delete_48;
+            this.btnDel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDel.Location = new System.Drawing.Point(0, 260);
+            this.btnDel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnDel.Name = "btnDel";
+            this.btnDel.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
+            this.btnDel.Size = new System.Drawing.Size(303, 60);
+            this.btnDel.TabIndex = 8;
+            this.btnDel.Text = " Xoá User/Role";
+            this.btnDel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnDel.UseVisualStyleBackColor = true;
+            this.btnDel.Click += new System.EventHandler(this.btnDel_Click);
+            // 
+            // btnGrantRevoke
+            // 
+            this.btnGrantRevoke.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnGrantRevoke.FlatAppearance.BorderSize = 0;
+            this.btnGrantRevoke.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGrantRevoke.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btnGrantRevoke.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnGrantRevoke.Image = global::PhanHe1.Properties.Resources.icons8_grant_48;
+            this.btnGrantRevoke.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGrantRevoke.Location = new System.Drawing.Point(0, 200);
+            this.btnGrantRevoke.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnGrantRevoke.Name = "btnGrantRevoke";
+            this.btnGrantRevoke.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
+            this.btnGrantRevoke.Size = new System.Drawing.Size(303, 60);
+            this.btnGrantRevoke.TabIndex = 3;
+            this.btnGrantRevoke.Text = " Trao/Tước quyền";
+            this.btnGrantRevoke.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGrantRevoke.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnGrantRevoke.UseVisualStyleBackColor = true;
+            this.btnGrantRevoke.Click += new System.EventHandler(this.btnGrantRevoke_Click);
+            // 
+            // btnPriv
+            // 
+            this.btnPriv.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPriv.FlatAppearance.BorderSize = 0;
+            this.btnPriv.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPriv.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btnPriv.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnPriv.Image = global::PhanHe1.Properties.Resources.icons8_privilege_48;
+            this.btnPriv.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPriv.Location = new System.Drawing.Point(0, 140);
+            this.btnPriv.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnPriv.Name = "btnPriv";
+            this.btnPriv.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
+            this.btnPriv.Size = new System.Drawing.Size(303, 60);
+            this.btnPriv.TabIndex = 2;
+            this.btnPriv.Text = " Quyền User/Role";
+            this.btnPriv.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPriv.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnPriv.UseVisualStyleBackColor = true;
+            this.btnPriv.Click += new System.EventHandler(this.btnPriv_Click);
+            // 
+            // btnList
+            // 
+            this.btnList.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnList.FlatAppearance.BorderSize = 0;
+            this.btnList.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnList.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btnList.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnList.Image = global::PhanHe1.Properties.Resources.icons8_list_48;
+            this.btnList.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnList.Location = new System.Drawing.Point(0, 80);
+            this.btnList.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnList.Name = "btnList";
+            this.btnList.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
+            this.btnList.Size = new System.Drawing.Size(303, 60);
+            this.btnList.TabIndex = 1;
+            this.btnList.Text = " Xem tất cả User";
+            this.btnList.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnList.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnList.UseVisualStyleBackColor = true;
+            this.btnList.Click += new System.EventHandler(this.btnList_Click);
             // 
             // FormMainMenu
             // 
@@ -364,6 +387,7 @@
         private System.Windows.Forms.Label lblUser;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblGroupName;
-        private System.Windows.Forms.Button btnLogOut;
+        private System.Windows.Forms.Button btnDel;
+        private System.Windows.Forms.Button btnLogout;
     }
 }

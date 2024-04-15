@@ -31,6 +31,7 @@ namespace PhanHe1
                 changeLabelName(labelName);
                 panelNotRU.Hide(); 
                 panel2.Show();
+                checkBoxOpion.Checked = false;
             }
         }
 
@@ -42,7 +43,8 @@ namespace PhanHe1
                 changeLabelName(labelName);
                 panelNotRU.Show();
                 panel2.Hide();
-                checkBoxOpion.Hide();
+                checkBoxOpion.Checked = false;
+                checkBoxOpion.Show();
 
 
             }
