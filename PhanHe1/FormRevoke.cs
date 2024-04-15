@@ -14,22 +14,42 @@ using Oracle.ManagedDataAccess.Client;
 
 namespace PhanHe1
 {
-    public partial class Revoke : Form
+    public partial class FormRevoke : Form
     {
         //OracleDataProvider db;
-        public Revoke()
+        bool commonUser;
+        public FormRevoke()
         {
             InitializeComponent();
-   
+            commonUser = CheckOnlyCommon();
+
+            textBox1.Padding = new Padding(20); 
+            dataGridView1.EnableHeadersVisualStyles = false;
+            dataGridView1.ColumnHeadersDefaultCellStyle.ForeColor = Color.FromArgb(32, 122, 125);
+            dataGridView1.ColumnHeadersDefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
+
+            dataGridView2.EnableHeadersVisualStyles = false;
+            dataGridView2.ColumnHeadersDefaultCellStyle.ForeColor = Color.FromArgb(32, 122, 125);
+            dataGridView2.ColumnHeadersDefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
         }
 
-        private void labelU_Click(object sender, EventArgs e)
+        private bool CheckOnlyCommon()
         {
-
+            string query = "ALTER SESSION SET \"_ORACLE_SCRIPT\" = true";
+            try
+            {
+                OracleDataProvider.Instance.ExecuteNonQuery(query);
+                return false;
+            }
+            catch (OracleException)
+            {
+                MessageBox.Show("Chỉ có thể tạo COMMON USER/ROLE, thêm C##");
+                return true;
+            }
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            string name = textBox1.Text.Trim();
+            string name = textBox1.Text.Trim().ToUpper();
             string query = "SELECT GRANTEE, OWNER, TABLE_NAME, COLUMN_NAME, GRANTOR, PRIVILEGE, GRANTABLE\r\n FROM dba_col_privs\r\n WHERE GRANTEE = '" + name + "'";
             query += "UNION ALL\r\nSELECT GRANTEE, OWNER, TABLE_NAME, NULL AS COLUMN_NAME, GRANTOR, PRIVILEGE, GRANTABLE\r\nFROM dba_tab_privs\r\nWHERE GRANTEE = '" + name + "'";
 
@@ -191,32 +211,5 @@ namespace PhanHe1
             }
         }
 
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-       
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void Revoke_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

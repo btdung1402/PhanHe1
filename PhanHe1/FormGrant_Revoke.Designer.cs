@@ -1,6 +1,6 @@
 ﻿namespace PhanHe1
 {
-    partial class grant_revoke
+    partial class FormGrant_Revoke
     {
         /// <summary>
         /// Required designer variable.
@@ -39,13 +39,13 @@
             // 
             // radPanel
             // 
-            this.radPanel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radPanel.Controls.Add(this.radiobuttonG);
             this.radPanel.Controls.Add(this.radbuttonR);
             this.radPanel.Controls.Add(this.radTittleGR);
-            this.radPanel.Location = new System.Drawing.Point(73, 26);
+            this.radPanel.Location = new System.Drawing.Point(154, 21);
+            this.radPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radPanel.Name = "radPanel";
-            this.radPanel.Size = new System.Drawing.Size(1075, 70);
+            this.radPanel.Size = new System.Drawing.Size(651, 56);
             this.radPanel.TabIndex = 0;
             this.radPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.radPanel_Paint);
             // 
@@ -53,9 +53,11 @@
             // 
             this.radiobuttonG.AutoSize = true;
             this.radiobuttonG.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radiobuttonG.Location = new System.Drawing.Point(246, 18);
+            this.radiobuttonG.ForeColor = System.Drawing.Color.White;
+            this.radiobuttonG.Location = new System.Drawing.Point(219, 14);
+            this.radiobuttonG.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radiobuttonG.Name = "radiobuttonG";
-            this.radiobuttonG.Size = new System.Drawing.Size(101, 33);
+            this.radiobuttonG.Size = new System.Drawing.Size(86, 29);
             this.radiobuttonG.TabIndex = 4;
             this.radiobuttonG.Text = "Grant";
             this.radiobuttonG.UseVisualStyleBackColor = true;
@@ -66,9 +68,11 @@
             this.radbuttonR.AutoSize = true;
             this.radbuttonR.Checked = true;
             this.radbuttonR.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radbuttonR.Location = new System.Drawing.Point(397, 18);
+            this.radbuttonR.ForeColor = System.Drawing.Color.White;
+            this.radbuttonR.Location = new System.Drawing.Point(353, 14);
+            this.radbuttonR.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radbuttonR.Name = "radbuttonR";
-            this.radbuttonR.Size = new System.Drawing.Size(126, 33);
+            this.radbuttonR.Size = new System.Drawing.Size(105, 29);
             this.radbuttonR.TabIndex = 2;
             this.radbuttonR.TabStop = true;
             this.radbuttonR.Text = "Revoke";
@@ -79,31 +83,32 @@
             // 
             this.radTittleGR.AutoSize = true;
             this.radTittleGR.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radTittleGR.Location = new System.Drawing.Point(3, 17);
+            this.radTittleGR.ForeColor = System.Drawing.Color.White;
+            this.radTittleGR.Location = new System.Drawing.Point(3, 14);
             this.radTittleGR.Name = "radTittleGR";
-            this.radTittleGR.Size = new System.Drawing.Size(156, 32);
+            this.radTittleGR.Size = new System.Drawing.Size(132, 29);
             this.radTittleGR.TabIndex = 0;
             this.radTittleGR.Text = "Lựa chọn: ";
             // 
             // panelExecuteGR
             // 
-            this.panelExecuteGR.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panelExecuteGR.BackColor = System.Drawing.SystemColors.Info;
-            this.panelExecuteGR.Location = new System.Drawing.Point(73, 102);
+            this.panelExecuteGR.BackColor = System.Drawing.SystemColors.Control;
+            this.panelExecuteGR.Location = new System.Drawing.Point(12, 81);
+            this.panelExecuteGR.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelExecuteGR.Name = "panelExecuteGR";
-            this.panelExecuteGR.Size = new System.Drawing.Size(1074, 591);
+            this.panelExecuteGR.Size = new System.Drawing.Size(833, 394);
             this.panelExecuteGR.TabIndex = 1;
-            this.panelExecuteGR.Paint += new System.Windows.Forms.PaintEventHandler(this.panelExecuteGR_Paint);
             // 
-            // grant_revoke
+            // FormGrant_Revoke
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1213, 721);
+            this.BackColor = System.Drawing.Color.CadetBlue;
+            this.ClientSize = new System.Drawing.Size(857, 504);
             this.Controls.Add(this.panelExecuteGR);
             this.Controls.Add(this.radPanel);
-            this.Name = "grant_revoke";
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Name = "FormGrant_Revoke";
             this.Text = "Form2";
             this.radPanel.ResumeLayout(false);
             this.radPanel.PerformLayout();

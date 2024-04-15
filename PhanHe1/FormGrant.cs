@@ -14,24 +14,21 @@ using System.Collections;
 
 namespace PhanHe1
 {
-    public partial class Grant : Form
+    public partial class FormGrant : Form
     {
         string labelName = "";
 
-        public Grant()
+        public FormGrant()
         {
             InitializeComponent();
-        }
-
-        private void Grant_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void radioButtonRU_CheckedChanged(object sender, EventArgs e)
         {
             if(radioButtonRU.Checked)
             {
+                labelName = "Tên User: ";
+                changeLabelName(labelName);
                 panelNotRU.Hide(); 
                 panel2.Show();
             }
@@ -72,25 +69,6 @@ namespace PhanHe1
         }
 
 
-        private void labelNameG_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkBoxOpion_CheckedChanged(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void panelOption_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void labelOption_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void buttonGrant_Click(object sender, EventArgs e)
         {
@@ -100,6 +78,11 @@ namespace PhanHe1
                 string name = textNameG.Text.Trim();
                 string table = textBoxTable.Text.Trim(); ;
                 string option = checkBoxOpion.Checked ? "with grant option" : "";
+                if (string.IsNullOrEmpty(name)||string.IsNullOrEmpty(table))
+                {
+                    MessageBox.Show("Vui lòng nhập đủ thông tin.");
+                    return;
+                }
                 string right = "";
                 string spe_right = "";
                 string col = "";
@@ -177,10 +160,7 @@ namespace PhanHe1
 
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+   
 
         private void checkBoxU_CheckedChanged(object sender, EventArgs e)
         {
@@ -195,20 +175,7 @@ namespace PhanHe1
             }  
         }
 
-        private void textBoxForU_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panelNotRU_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
+      
 
         private void textBoxRU_TextChanged(object sender, EventArgs e)
         {

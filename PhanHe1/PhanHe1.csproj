@@ -162,17 +162,17 @@
     <Compile Include="FormSearch.Designer.cs">
       <DependentUpon>FormSearch.cs</DependentUpon>
     </Compile>
-    <Compile Include="Grant.cs">
+    <Compile Include="FormGrant.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Grant.Designer.cs">
-      <DependentUpon>Grant.cs</DependentUpon>
+    <Compile Include="FormGrant.Designer.cs">
+      <DependentUpon>FormGrant.cs</DependentUpon>
     </Compile>
-    <Compile Include="grant_revoke.cs">
+    <Compile Include="FormGrant_Revoke.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="grant_revoke.Designer.cs">
-      <DependentUpon>grant_revoke.cs</DependentUpon>
+    <Compile Include="FormGrant_Revoke.Designer.cs">
+      <DependentUpon>FormGrant_Revoke.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -181,11 +181,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Revoke.cs">
+    <Compile Include="FormRevoke.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Revoke.Designer.cs">
-      <DependentUpon>Revoke.cs</DependentUpon>
+    <Compile Include="FormRevoke.Designer.cs">
+      <DependentUpon>FormRevoke.cs</DependentUpon>
     </Compile>
     <Compile Include="ThemeColor.cs" />
     <EmbeddedResource Include="FormAdd.resx">
@@ -206,14 +206,17 @@
     <EmbeddedResource Include="FormPrivilege.resx">
       <DependentUpon>FormPrivilege.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormRevoke.resx">
+      <DependentUpon>FormRevoke.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormSearch.resx">
       <DependentUpon>FormSearch.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Grant.resx">
-      <DependentUpon>Grant.cs</DependentUpon>
+    <EmbeddedResource Include="FormGrant.resx">
+      <DependentUpon>FormGrant.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="grant_revoke.resx">
-      <DependentUpon>grant_revoke.cs</DependentUpon>
+    <EmbeddedResource Include="FormGrant_Revoke.resx">
+      <DependentUpon>FormGrant_Revoke.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

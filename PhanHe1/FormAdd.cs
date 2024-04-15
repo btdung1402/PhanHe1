@@ -19,8 +19,9 @@ namespace PhanHe1
         public FormAdd()
         {
             InitializeComponent();
-            LoadDataForComboBox();
             CheckOnlyCommon();
+            LoadDataForComboBox();
+
         }
 
         private bool CheckOnlyCommon()
@@ -72,7 +73,21 @@ namespace PhanHe1
 
             // Load data from the database into the DataTable
             string query = "SELECT ROLE FROM DBA_ROLES";
-            dataTable.Merge(OracleDataProvider.Instance.ExecuteQuery(query));
+            try
+            {
+                dataTable.Merge(OracleDataProvider.Instance.ExecuteQuery(query));
+
+            }
+            catch (OracleException ex)
+            {
+                //  insufficient privileges
+                if (ex.Number == 1031)
+                {
+                    MessageBox.Show("Tài khoản không có đủ quyền.");
+                }
+                else
+                    MessageBox.Show("Lỗi: " + ex.Message);
+            }
 
             // Bind the DataTable to the ComboBox
             cbbRole.DataSource = dataTable;

@@ -12,22 +12,17 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 
 namespace PhanHe1
 {
-    public partial class grant_revoke : Form
+    public partial class FormGrant_Revoke : Form
     {
-        Grant grant;
-        Revoke revoke;
-        public grant_revoke()
+        FormGrant grant;
+        FormRevoke revoke;
+        public FormGrant_Revoke()
         {
 
             InitializeComponent();
-            
+            radiobuttonG.Checked = true;
         }
 
-       
-        private void panelExecuteGR_Paint(object sender, PaintEventArgs e)
-        {
-            
-        }
 
 
 
@@ -37,7 +32,7 @@ namespace PhanHe1
             {
                 if (revoke == null)
                 {
-                    revoke = new Revoke();
+                    revoke = new FormRevoke();
                     SetupForm(revoke);
                 }
                 revoke.Show();
@@ -52,7 +47,7 @@ namespace PhanHe1
             {
                 if (grant == null)
                 {
-                    grant = new Grant();
+                    grant = new FormGrant();
                     SetupForm(grant);
                 }
                 grant.Show();

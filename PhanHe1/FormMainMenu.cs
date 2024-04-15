@@ -195,5 +195,10 @@ namespace PhanHe1
             }
 
         }
+
+        private void btnGrantRevoke_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FormGrant_Revoke(),sender);
+        }
     }
 }
