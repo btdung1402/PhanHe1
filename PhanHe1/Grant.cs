@@ -45,10 +45,11 @@ namespace PhanHe1
                 changeLabelName(labelName);
                 panelNotRU.Show();
                 panel2.Hide();
+                checkBoxOpion.Hide();
 
 
             }
-
+            
         }
 
         private void radioButtonUser_CheckedChanged(object sender, EventArgs e)
@@ -59,6 +60,7 @@ namespace PhanHe1
                 changeLabelName(labelName);
                 panelNotRU.Show();
                 panel2.Hide();
+                checkBoxOpion.Show();
 
 
             }
@@ -77,7 +79,7 @@ namespace PhanHe1
 
         private void checkBoxOpion_CheckedChanged(object sender, EventArgs e)
         {
-
+            
         }
 
         private void panelOption_Paint(object sender, PaintEventArgs e)
@@ -116,7 +118,7 @@ namespace PhanHe1
                 }
                 if (checkBoxU.Checked)
                 {
-                    spe_right += "SELECT, UPDATE";
+                    spe_right += "UPDATE";
                     col = textBoxForU.Text;
 
                 }
@@ -128,8 +130,8 @@ namespace PhanHe1
                     string grantQuery = "";
                     if (right != "")
                     {
-                        grantQuery = "GRANT " + right + " ON sys." + table + " TO " + name + " " + option;
-                       // MessageBox.Show(grantQuery);
+                        grantQuery = "GRANT " + right + " ON sys." + table + " TO " + name + " " + option ;
+                       //MessageBox.Show(grantQuery);
                         try
                         {
                             OracleDataProvider.Instance.ExecuteNonQuery(grantQuery);
@@ -145,10 +147,11 @@ namespace PhanHe1
                     if (spe_right != "" && col != "")
                     {
                         spe_grantQuery = "GRANT " + spe_right + " (" + col + ")" + " ON sys." + table + " TO " + name + " " + option;
-                        MessageBox.Show(spe_grantQuery);
+                        //MessageBox.Show(spe_grantQuery);
 
                         try
                         {
+                            
                             OracleDataProvider.Instance.ExecuteNonQuery(spe_grantQuery);
                             MessageBox.Show("Quyền đã được cấp thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
@@ -183,7 +186,8 @@ namespace PhanHe1
         {
             if(checkBoxU.Checked)
             {
-                panel1.Show();  
+                panel1.Show();
+       
             }
             else
             { 
@@ -224,7 +228,8 @@ namespace PhanHe1
                 }
                 else
                 {
-                    string grantQuery = $"GRANT {role} TO {name}";
+                    string grantQuery = "GRANT " + role + " TO " + name;
+                    
                     try
                     {
                         OracleDataProvider.Instance.ExecuteNonQuery(grantQuery);
