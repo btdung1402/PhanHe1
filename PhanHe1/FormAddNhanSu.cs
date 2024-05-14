@@ -34,7 +34,7 @@ namespace PhanHe1
             string date = dateTimePicker1.Value.ToString("dd-MM-yyyy");
             string phucap = textBoxSalary.Text.Trim();
             string dt = textBoxPhone.Text.Trim();
-            string vaitro = comboBoxRole.SelectedItem.ToString();
+            string vaitro = (comboBoxRole.SelectedItem == null)? string.Empty:comboBoxRole.SelectedItem.ToString();
             string madv = textBoxDept.Text.Trim();
 
             if (string.IsNullOrEmpty(id) || string.IsNullOrEmpty(name) || string.IsNullOrEmpty(phai)

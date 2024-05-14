@@ -106,7 +106,7 @@ namespace PhanHe1
                     // Handle other Oracle exceptions
                     MessageBox.Show("Oracle Error: " + ex.Message);
                 }
-            }
+            }   
         }
 
         private void btn_xoa_Click(object sender, EventArgs e)
@@ -137,7 +137,7 @@ namespace PhanHe1
             }
             else
             {
-                MessageBox.Show("role khong phu hơp de drop.");
+                MessageBox.Show("Vai trò của bạn không có chức năng này.");
             }
             try
             {
@@ -149,8 +149,13 @@ namespace PhanHe1
             }
             catch (OracleException ex)
             {
+                if (ex.Number == 942) // ORA-00942: table or view does not exist
+                {
+                    // Handle the specific error here
+                    MessageBox.Show("Bạn không có quyền truy cập bảng PhanCong.");
+                }
                 //  insufficient privileges
-                if (ex.Number == 1031)
+                else if (ex.Number == 1031)
                 {
                     MessageBox.Show("Tài khoản không có đủ quyền.");
                 }
@@ -323,6 +328,10 @@ namespace PhanHe1
                     else if (OracleDataProvider.ROLE.ToUpper() == "TRUONGKHOA")
                     {
                         wTbl = "PHANHE2.V_PHANCONG_TRUONGKHOA";
+                    }
+                    else if (OracleDataProvider.ROLE.ToUpper() == "GIAOVU")
+                    {
+                        wTbl = "PHANHE2.V_PHANCONG_GIAOVU";
                     }
                     else
                     {

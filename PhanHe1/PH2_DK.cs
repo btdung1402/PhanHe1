@@ -59,6 +59,7 @@ namespace PhanHe1
                 table = "PHANHE2.V_THOA_DANGKY_GIAOVU";
                 btn_d.Visible = true;
                 btn_I.Visible = true;
+                panelID.Visible = true;
                 themdangky.Visible = true;
             }
             else if (OracleDataProvider.ROLE.ToUpper() == "SINHVIEN")
@@ -66,6 +67,8 @@ namespace PhanHe1
                 table = "PHANHE2.DANGKY";
                 btn_d.Visible = true;
                 btn_I.Visible = true;
+                tbmasv.Text = OracleDataProvider.Username.ToUpper();
+                tbmasv.Enabled = false;
                 themdangky.Visible = true;
             }
             return table;
@@ -74,6 +77,11 @@ namespace PhanHe1
         {
             try
             {
+                if (string.IsNullOrEmpty(workingTable))
+                {
+                    MessageBox.Show("Bạn không có quyền truy cập bảng DangKy.");
+                    return;
+                }    
                 string queryDangKy = $"SELECT * FROM {workingTable} ORDER BY DANGKY_ID";
 
 
@@ -84,7 +92,7 @@ namespace PhanHe1
                 dataGridView1.DataSource = dataSinhVien;
                 if (dataSinhVien.Rows.Count == 0)
                 {
-                    MessageBox.Show("Bạn chưa có dữ liệu trên bảng DangKy.");
+                    MessageBox.Show("Chưa có dữ liệu trên bảng DangKy.");
                 }
             }
             catch (OracleException ex)
@@ -224,6 +232,10 @@ namespace PhanHe1
                 {
                     MessageBox.Show("Tài khoản không có đủ quyền.");
                 }
+                else if (ex.Number == 1402 && OracleDataProvider.ROLE.ToLower() == "giaovu") // WITH CHECK OPTION
+                {
+                    MessageBox.Show("Chưa đến lúc đăng ký học phần.");
+                }
                 else
                     MessageBox.Show("Lỗi: " + ex.Message);
             }
@@ -298,6 +310,14 @@ namespace PhanHe1
                 {
                     // Handle the specific error here
                     MessageBox.Show("Bạn không có quyền truy cập chức năng này.");
+                }
+                else if (ex.Number == 1031)
+                {
+                    MessageBox.Show("Tài khoản không có đủ quyền.");
+                }
+                else if (ex.Number == 1402 && OracleDataProvider.ROLE.ToLower() == "giaovu") // WITH CHECK OPTION
+                {
+                    MessageBox.Show("Chưa đến lúc đăng ký học phần.");
                 }
                 else
                 {
