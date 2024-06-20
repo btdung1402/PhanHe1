@@ -27,12 +27,13 @@ namespace PhanHe1
             btnCloseChildForm.Visible = false;
             this.Text = string.Empty; // Disable the title text
             this.ControlBox = false; // Disable Control box
-            this.FormBorderStyle = FormBorderStyle.FixedSingle; // Disable window resizing
+            //this.FormBorderStyle = FormBorderStyle.FixedSingle; // Disable window resizing
+            this.FormBorderStyle = FormBorderStyle.Sizable; // Enable window resizing
             btnMaximine.Enabled = false; // Disable the custom maximine button
             oldP = lblTitle.Location;
         }
 
-        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]    
         private extern static void ReleaseCapture();
 
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
@@ -169,7 +170,7 @@ namespace PhanHe1
 
         private void FormMainMenu_Load(object sender, EventArgs e)
         {
-            string username = OracleDataProvider.username.ToUpper();
+            string username = OracleDataProvider.Username.ToUpper();
             lblUser.Text = $"Xin chào, {username}!";
             panel1.Size = new System.Drawing.Size(lblUser.Width + 10, 1);
         }
@@ -188,6 +189,8 @@ namespace PhanHe1
             {
                 _relog = true;
                 this.Close();
+                FormLogin f = new FormLogin();
+                f.Show();
             }
         }
 
@@ -199,6 +202,16 @@ namespace PhanHe1
         private void btnDel_Click(object sender, EventArgs e)
         {
             OpenChildForm(new FormDel(), sender);
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            if (!OracleDataProvider.PH1) return;
+
+            FormMainMenu_PH2 f = new FormMainMenu_PH2();
+            _relog = true;
+            this.Close();
+            f.Show();
         }
     }
 }

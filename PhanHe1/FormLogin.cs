@@ -12,6 +12,7 @@ using System.Threading.Tasks;
 using System.Web.UI.Design.WebControls;
 using System.Windows.Forms;
 using Oracle.ManagedDataAccess.Client; //Oracle Client Library
+using System.Configuration;
 
 namespace PhanHe1
 {
@@ -52,16 +53,34 @@ namespace PhanHe1
             string username = txtUserName.Text;
             string password = txtPassword.Text;
             
-            string conn = "Data Source = (DESCRIPTION = (ADDRESS_LIST = (ADDRESS = (PROTOCOL = TCP)(HOST = localhost)(PORT = 1521)))(CONNECT_DATA = (SERVER = DEDICATED)(SERVICE_NAME = xe))); User Id =" + username + "; Password=" + password + ";";
+            string conn = ConfigurationManager.ConnectionStrings["con"].ConnectionString 
+                + "User Id =" + username 
+                + "; Password=" + password + ";";
 
-            OracleDataProvider.Initialize(conn);
+            OracleDataProvider.Initialize(conn,username);
             OracleDataProvider ODP = OracleDataProvider.Instance;
             if (ODP.TestConnection())
             {
-                FormMainMenu_PH1 f = new FormMainMenu_PH2();
-                this.Hide();
-                f.FormClosed += MainMenu_FormClosed;
-                f.Show();
+                string specialUsersConfig = ConfigurationManager.AppSettings["SpecialUsers"];
+                string[] specialUsers = specialUsersConfig.Split(',');
+                // Check if the username is in the list
+
+                if (specialUsers.Contains(username.ToLower()))
+                {
+                    OracleDataProvider.PH1 = true;
+                    FormMainMenu_PH1 f = new FormMainMenu_PH1();
+                    this.Hide();
+                    //f.FormClosed += MainMenu_FormClosed;
+                    f.Show();
+                }
+                else
+                {
+                    OracleDataProvider.PH1 = false;
+                    FormMainMenu_PH2 f = new FormMainMenu_PH2();
+                    this.Hide();
+                    //f.FormClosed += MainMenu_FormClosed;
+                    f.Show();
+                }
             }
             else
             {

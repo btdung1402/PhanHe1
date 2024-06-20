@@ -18,9 +18,9 @@ namespace PhanHe1.DAO
         private static readonly object lockObject = new object();
         
         //You can change the default connection string in app.config
-        private static string _connectionString = ConfigurationManager.ConnectionStrings["con"].ConnectionString;
-        public static string username;
-
+        private static string _connectionString = ConfigurationManager.ConnectionStrings["default_con"].ConnectionString;
+        public static string Username { get; set; }
+        public static bool PH1 { get; set; }
         private OracleDataProvider()   {     }
 
         public static OracleDataProvider Instance
@@ -40,10 +40,13 @@ namespace PhanHe1.DAO
         }
 
         
-        public static void Initialize(string connectionString)
+        public static void Initialize(string connectionString, string _username = null)
         {
             _connectionString = connectionString;
-            username = UserName();
+            if (_username == null || _username.Length == 0)
+                Username = UserNameFromConnectionString();
+            else Username = _username;
+            
         }
 
         public bool TestConnection()
@@ -62,7 +65,7 @@ namespace PhanHe1.DAO
             }
         }
 
-        public static string UserName()
+        public static string UserNameFromConnectionString()
         {
             // Find the index of the substring "User Id =" in the connection string
             int userIdIndex = _connectionString.IndexOf("User Id =");

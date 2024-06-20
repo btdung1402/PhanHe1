@@ -123,6 +123,16 @@ namespace PhanHe1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_notification_48 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-notification-48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_privilege_48 {
             get {
                 object obj = ResourceManager.GetObject("icons8-privilege-48", resourceCulture);

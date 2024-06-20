@@ -190,6 +190,12 @@
     <Compile Include="FormMainMenu_PH1.Designer.cs">
       <DependentUpon>FormMainMenu_PH1.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormNotification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNotification.Designer.cs">
+      <DependentUpon>FormNotification.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormPrivilege.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -248,6 +254,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormMainMenu_PH1.resx">
       <DependentUpon>FormMainMenu_PH1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormNotification.resx">
+      <DependentUpon>FormNotification.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormPrivilege.resx">
       <DependentUpon>FormPrivilege.cs</DependentUpon>
@@ -332,6 +341,9 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-notification-48.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
