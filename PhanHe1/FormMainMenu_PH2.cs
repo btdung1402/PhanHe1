@@ -13,7 +13,7 @@ using System.Windows.Forms;
 
 namespace PhanHe1
 {
-    public partial class FormMainMenu : Form
+    public partial class FormMainMenu_PH2 : Form
     {
         //Fields
         private static bool _relog = false;
@@ -21,7 +21,7 @@ namespace PhanHe1
         private Form activeForm;
         private Point oldP;
         //Constructor
-        public FormMainMenu()
+        public FormMainMenu_PH2()
         {
             InitializeComponent();
             btnCloseChildForm.Visible = false;
@@ -159,7 +159,7 @@ namespace PhanHe1
 
         }
 
-        private void FormMainMenu_FormClosed(object sender, FormClosedEventArgs e)
+        private void FormMainMenu_PH2_FormClosed(object sender, FormClosedEventArgs e)
         {
             if (!_relog)
             {
@@ -167,7 +167,7 @@ namespace PhanHe1
             }
         }
 
-        private void FormMainMenu_Load(object sender, EventArgs e)
+        private void FormMainMenu_PH2_Load(object sender, EventArgs e)
         {
             string username = OracleDataProvider.username.ToUpper();
             lblUser.Text = $"Xin chào, {username}!";
@@ -200,5 +200,7 @@ namespace PhanHe1
         {
             OpenChildForm(new FormDel(), sender);
         }
+
+ 
     }
 }

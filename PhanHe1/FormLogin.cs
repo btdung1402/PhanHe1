@@ -58,7 +58,7 @@ namespace PhanHe1
             OracleDataProvider ODP = OracleDataProvider.Instance;
             if (ODP.TestConnection())
             {
-                FormMainMenu f = new FormMainMenu();
+                FormMainMenu_PH1 f = new FormMainMenu_PH2();
                 this.Hide();
                 f.FormClosed += MainMenu_FormClosed;
                 f.Show();

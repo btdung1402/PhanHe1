@@ -1,6 +1,6 @@
 ﻿namespace PhanHe1
 {
-    partial class FormMainMenu
+    partial class FormMainMenu_PH1
     {
         /// <summary>
         /// Required designer variable.

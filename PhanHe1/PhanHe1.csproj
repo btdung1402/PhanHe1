@@ -178,11 +178,17 @@
     <Compile Include="FormLogin.Designer.cs">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormMainMenu.cs">
+    <Compile Include="FormMainMenu_PH2.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormMainMenu.Designer.cs">
-      <DependentUpon>FormMainMenu.cs</DependentUpon>
+    <Compile Include="FormMainMenu_PH2.Designer.cs">
+      <DependentUpon>FormMainMenu_PH2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMainMenu_PH1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMainMenu_PH1.Designer.cs">
+      <DependentUpon>FormMainMenu_PH1.cs</DependentUpon>
     </Compile>
     <Compile Include="FormPrivilege.cs">
       <SubType>Form</SubType>
@@ -237,8 +243,11 @@
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormMainMenu.resx">
-      <DependentUpon>FormMainMenu.cs</DependentUpon>
+    <EmbeddedResource Include="FormMainMenu_PH2.resx">
+      <DependentUpon>FormMainMenu_PH2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMainMenu_PH1.resx">
+      <DependentUpon>FormMainMenu_PH1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormPrivilege.resx">
       <DependentUpon>FormPrivilege.cs</DependentUpon>
