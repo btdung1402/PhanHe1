@@ -17,11 +17,11 @@ namespace PhanHe1
     public partial class FormRevoke : Form
     {
         //OracleDataProvider db;
-        bool commonUser;
+        //bool commonUser;
         public FormRevoke()
         {
             InitializeComponent();
-            commonUser = CheckOnlyCommon();
+            //commonUser = CheckOnlyCommon();
 
             textBox1.Padding = new Padding(20); 
             dataGridView1.EnableHeadersVisualStyles = false;
@@ -33,6 +33,7 @@ namespace PhanHe1
             dataGridView2.ColumnHeadersDefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
         }
 
+        // Use for Container Database
         private bool CheckOnlyCommon()
         {
             string query = "ALTER SESSION SET \"_ORACLE_SCRIPT\" = true";
@@ -47,6 +48,7 @@ namespace PhanHe1
                 return true;
             }
         }
+
         private void button1_Click(object sender, EventArgs e)
         {
             string name = textBox1.Text.Trim().ToUpper();
@@ -132,7 +134,7 @@ namespace PhanHe1
                     if (result == DialogResult.Yes)
                     {
                         
-                        string revokeQuery = "REVOKE " + privilege + " ON sys." + tableName + " FROM " + grantee;
+                        string revokeQuery = "REVOKE " + privilege + " ON PHANHE2." + tableName + " FROM " + grantee;
 
                         OracleDataProvider.Instance.ExecuteNonQuery(revokeQuery);
 

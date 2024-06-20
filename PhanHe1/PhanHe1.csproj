@@ -154,6 +154,12 @@
     <Compile Include="FormAdd.Designer.cs">
       <DependentUpon>FormAdd.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormAudit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAudit.Designer.cs">
+      <DependentUpon>FormAudit.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormChangePassword.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -236,6 +242,9 @@
     <Compile Include="ThemeColor.cs" />
     <EmbeddedResource Include="FormAdd.resx">
       <DependentUpon>FormAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAudit.resx">
+      <DependentUpon>FormAudit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormChangePassword.resx">
       <DependentUpon>FormChangePassword.cs</DependentUpon>
@@ -344,6 +353,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-notification-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-audit-48.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

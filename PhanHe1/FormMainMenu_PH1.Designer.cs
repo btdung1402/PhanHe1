@@ -30,11 +30,13 @@
         {
             this.panelMenu = new System.Windows.Forms.Panel();
             this.btnLogout = new System.Windows.Forms.Button();
+            this.btnAudit = new System.Windows.Forms.Button();
             this.btnDel = new System.Windows.Forms.Button();
             this.btnGrantRevoke = new System.Windows.Forms.Button();
             this.btnPriv = new System.Windows.Forms.Button();
             this.btnList = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.panelTitleBar = new System.Windows.Forms.Panel();
             this.btnMinimine = new System.Windows.Forms.Button();
             this.btnMaximine = new System.Windows.Forms.Button();
@@ -46,7 +48,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblUser = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             this.panelTitleBar.SuspendLayout();
@@ -58,6 +59,7 @@
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
             this.panelMenu.Controls.Add(this.btnLogout);
+            this.panelMenu.Controls.Add(this.btnAudit);
             this.panelMenu.Controls.Add(this.btnDel);
             this.panelMenu.Controls.Add(this.btnGrantRevoke);
             this.panelMenu.Controls.Add(this.btnPriv);
@@ -79,17 +81,38 @@
             this.btnLogout.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnLogout.Image = global::PhanHe1.Properties.Resources.icons8_logout_48;
             this.btnLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLogout.Location = new System.Drawing.Point(0, 320);
+            this.btnLogout.Location = new System.Drawing.Point(0, 380);
             this.btnLogout.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
             this.btnLogout.Size = new System.Drawing.Size(303, 60);
-            this.btnLogout.TabIndex = 9;
+            this.btnLogout.TabIndex = 10;
             this.btnLogout.Text = " Đăng xuất";
             this.btnLogout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLogout.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnLogout.UseVisualStyleBackColor = true;
             this.btnLogout.Click += new System.EventHandler(this.btnLogOut_Click);
+            // 
+            // btnAudit
+            // 
+            this.btnAudit.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAudit.FlatAppearance.BorderSize = 0;
+            this.btnAudit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAudit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btnAudit.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnAudit.Image = global::PhanHe1.Properties.Resources.icons8_audit_48;
+            this.btnAudit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAudit.Location = new System.Drawing.Point(0, 320);
+            this.btnAudit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAudit.Name = "btnAudit";
+            this.btnAudit.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
+            this.btnAudit.Size = new System.Drawing.Size(303, 60);
+            this.btnAudit.TabIndex = 9;
+            this.btnAudit.Text = " Audit";
+            this.btnAudit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAudit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAudit.UseVisualStyleBackColor = true;
+            this.btnAudit.Click += new System.EventHandler(this.btnAudit_Click);
             // 
             // btnDel
             // 
@@ -185,6 +208,18 @@
             this.panelLogo.Name = "panelLogo";
             this.panelLogo.Size = new System.Drawing.Size(303, 80);
             this.panelLogo.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.Color.LightGray;
+            this.label1.Location = new System.Drawing.Point(71, 22);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(160, 36);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Phân hệ 1";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // panelTitleBar
             // 
@@ -334,18 +369,6 @@
             this.panel1.Size = new System.Drawing.Size(280, 1);
             this.panel1.TabIndex = 7;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.Color.LightGray;
-            this.label1.Location = new System.Drawing.Point(71, 22);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(160, 36);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Phân hệ 1";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
             // FormMainMenu_PH1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -395,5 +418,6 @@
         private System.Windows.Forms.Button btnDel;
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnAudit;
     }
 }

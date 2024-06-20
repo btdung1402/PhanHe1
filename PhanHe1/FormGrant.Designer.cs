@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.Grantfor = new System.Windows.Forms.Label();
-            this.radioButtonRole = new System.Windows.Forms.RadioButton();
             this.radioButtonRU = new System.Windows.Forms.RadioButton();
             this.labelNameG = new System.Windows.Forms.Label();
             this.textNameG = new System.Windows.Forms.TextBox();
             this.radioButtonUser = new System.Windows.Forms.RadioButton();
             this.checkBoxOpion = new System.Windows.Forms.CheckBox();
             this.panelOption = new System.Windows.Forms.Panel();
+            this.checkBoxCustom = new System.Windows.Forms.CheckBox();
             this.checkBoxU = new System.Windows.Forms.CheckBox();
             this.checkBoxS = new System.Windows.Forms.CheckBox();
             this.checkBoxD = new System.Windows.Forms.CheckBox();
@@ -71,31 +71,17 @@
             this.Grantfor.TabIndex = 0;
             this.Grantfor.Text = "Cấp";
             // 
-            // radioButtonRole
-            // 
-            this.radioButtonRole.AutoSize = true;
-            this.radioButtonRole.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonRole.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(122)))), ((int)(((byte)(125)))));
-            this.radioButtonRole.Location = new System.Drawing.Point(349, 9);
-            this.radioButtonRole.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.radioButtonRole.Name = "radioButtonRole";
-            this.radioButtonRole.Size = new System.Drawing.Size(157, 24);
-            this.radioButtonRole.TabIndex = 2;
-            this.radioButtonRole.Text = "Quyền cho role";
-            this.radioButtonRole.UseVisualStyleBackColor = true;
-            this.radioButtonRole.CheckedChanged += new System.EventHandler(this.radioButtonRole_CheckedChanged);
-            // 
             // radioButtonRU
             // 
             this.radioButtonRU.AutoSize = true;
             this.radioButtonRU.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButtonRU.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(122)))), ((int)(((byte)(125)))));
-            this.radioButtonRU.Location = new System.Drawing.Point(578, 9);
+            this.radioButtonRU.Location = new System.Drawing.Point(383, 7);
             this.radioButtonRU.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioButtonRU.Name = "radioButtonRU";
-            this.radioButtonRU.Size = new System.Drawing.Size(147, 24);
+            this.radioButtonRU.Size = new System.Drawing.Size(194, 24);
             this.radioButtonRU.TabIndex = 3;
-            this.radioButtonRU.Text = "Role cho user";
+            this.radioButtonRU.Text = "Role cho User/Role";
             this.radioButtonRU.UseVisualStyleBackColor = true;
             this.radioButtonRU.CheckedChanged += new System.EventHandler(this.radioButtonRU_CheckedChanged);
             // 
@@ -106,9 +92,9 @@
             this.labelNameG.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(122)))), ((int)(((byte)(125)))));
             this.labelNameG.Location = new System.Drawing.Point(26, 45);
             this.labelNameG.Name = "labelNameG";
-            this.labelNameG.Size = new System.Drawing.Size(86, 20);
+            this.labelNameG.Size = new System.Drawing.Size(130, 20);
             this.labelNameG.TabIndex = 4;
-            this.labelNameG.Text = "Tên User";
+            this.labelNameG.Text = "Tên User/Role";
             // 
             // textNameG
             // 
@@ -129,10 +115,10 @@
             this.radioButtonUser.Location = new System.Drawing.Point(121, 9);
             this.radioButtonUser.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioButtonUser.Name = "radioButtonUser";
-            this.radioButtonUser.Size = new System.Drawing.Size(162, 24);
+            this.radioButtonUser.Size = new System.Drawing.Size(209, 24);
             this.radioButtonUser.TabIndex = 6;
             this.radioButtonUser.TabStop = true;
-            this.radioButtonUser.Text = "Quyền cho user";
+            this.radioButtonUser.Text = "Quyền cho User/Role";
             this.radioButtonUser.UseVisualStyleBackColor = true;
             this.radioButtonUser.CheckedChanged += new System.EventHandler(this.radioButtonUser_CheckedChanged);
             // 
@@ -151,6 +137,7 @@
             // 
             // panelOption
             // 
+            this.panelOption.Controls.Add(this.checkBoxCustom);
             this.panelOption.Controls.Add(this.checkBoxU);
             this.panelOption.Controls.Add(this.checkBoxS);
             this.panelOption.Controls.Add(this.checkBoxD);
@@ -162,12 +149,26 @@
             this.panelOption.Size = new System.Drawing.Size(749, 57);
             this.panelOption.TabIndex = 8;
             // 
+            // checkBoxCustom
+            // 
+            this.checkBoxCustom.AutoSize = true;
+            this.checkBoxCustom.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxCustom.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(122)))), ((int)(((byte)(125)))));
+            this.checkBoxCustom.Location = new System.Drawing.Point(631, 19);
+            this.checkBoxCustom.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.checkBoxCustom.Name = "checkBoxCustom";
+            this.checkBoxCustom.Size = new System.Drawing.Size(108, 29);
+            this.checkBoxCustom.TabIndex = 4;
+            this.checkBoxCustom.Text = "Custom";
+            this.checkBoxCustom.UseVisualStyleBackColor = true;
+            this.checkBoxCustom.CheckedChanged += new System.EventHandler(this.checkCustom_CheckedChanged);
+            // 
             // checkBoxU
             // 
             this.checkBoxU.AutoSize = true;
             this.checkBoxU.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBoxU.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(122)))), ((int)(((byte)(125)))));
-            this.checkBoxU.Location = new System.Drawing.Point(574, 18);
+            this.checkBoxU.Location = new System.Drawing.Point(512, 18);
             this.checkBoxU.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkBoxU.Name = "checkBoxU";
             this.checkBoxU.Size = new System.Drawing.Size(103, 29);
@@ -181,7 +182,7 @@
             this.checkBoxS.AutoSize = true;
             this.checkBoxS.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBoxS.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(122)))), ((int)(((byte)(125)))));
-            this.checkBoxS.Location = new System.Drawing.Point(441, 18);
+            this.checkBoxS.Location = new System.Drawing.Point(382, 18);
             this.checkBoxS.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkBoxS.Name = "checkBoxS";
             this.checkBoxS.Size = new System.Drawing.Size(95, 29);
@@ -194,7 +195,7 @@
             this.checkBoxD.AutoSize = true;
             this.checkBoxD.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBoxD.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(122)))), ((int)(((byte)(125)))));
-            this.checkBoxD.Location = new System.Drawing.Point(310, 18);
+            this.checkBoxD.Location = new System.Drawing.Point(258, 18);
             this.checkBoxD.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkBoxD.Name = "checkBoxD";
             this.checkBoxD.Size = new System.Drawing.Size(96, 29);
@@ -207,7 +208,7 @@
             this.checkBoxI.AutoSize = true;
             this.checkBoxI.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBoxI.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(122)))), ((int)(((byte)(125)))));
-            this.checkBoxI.Location = new System.Drawing.Point(184, 18);
+            this.checkBoxI.Location = new System.Drawing.Point(144, 19);
             this.checkBoxI.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkBoxI.Name = "checkBoxI";
             this.checkBoxI.Size = new System.Drawing.Size(88, 29);
@@ -244,7 +245,7 @@
             this.textBoxTable.Location = new System.Drawing.Point(113, 137);
             this.textBoxTable.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxTable.Name = "textBoxTable";
-            this.textBoxTable.Size = new System.Drawing.Size(512, 26);
+            this.textBoxTable.Size = new System.Drawing.Size(509, 26);
             this.textBoxTable.TabIndex = 10;
             // 
             // buttonGrant
@@ -255,7 +256,7 @@
             this.buttonGrant.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonGrant.Font = new System.Drawing.Font("Roboto", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonGrant.ForeColor = System.Drawing.Color.White;
-            this.buttonGrant.Location = new System.Drawing.Point(629, 173);
+            this.buttonGrant.Location = new System.Drawing.Point(631, 137);
             this.buttonGrant.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonGrant.Name = "buttonGrant";
             this.buttonGrant.Size = new System.Drawing.Size(137, 30);
@@ -319,14 +320,13 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(509, 27);
             this.textBox1.TabIndex = 13;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(122)))), ((int)(((byte)(125)))));
-            this.label1.Location = new System.Drawing.Point(3, 4);
+            this.label1.Location = new System.Drawing.Point(5, 2);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(78, 25);
             this.label1.TabIndex = 13;
@@ -378,9 +378,9 @@
             this.labelRU.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(122)))), ((int)(((byte)(125)))));
             this.labelRU.Location = new System.Drawing.Point(12, 10);
             this.labelRU.Name = "labelRU";
-            this.labelRU.Size = new System.Drawing.Size(84, 20);
+            this.labelRU.Size = new System.Drawing.Size(166, 20);
             this.labelRU.TabIndex = 15;
-            this.labelRU.Text = "Tên Role";
+            this.labelRU.Text = "Tên Role được cấp";
             // 
             // FormGrant
             // 
@@ -394,7 +394,6 @@
             this.Controls.Add(this.textNameG);
             this.Controls.Add(this.labelNameG);
             this.Controls.Add(this.radioButtonRU);
-            this.Controls.Add(this.radioButtonRole);
             this.Controls.Add(this.Grantfor);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormGrant";
@@ -415,7 +414,6 @@
         #endregion
 
         private System.Windows.Forms.Label Grantfor;
-        private System.Windows.Forms.RadioButton radioButtonRole;
         private System.Windows.Forms.RadioButton radioButtonRU;
         private System.Windows.Forms.Label labelNameG;
         private System.Windows.Forms.TextBox textNameG;
@@ -441,5 +439,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.CheckBox checkBoxCustom;
     }
 }

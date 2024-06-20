@@ -19,13 +19,14 @@ namespace PhanHe1
         public FormDel()
         {
             InitializeComponent();
-            CheckOnlyCommon();
+            //CheckOnlyCommon();
             dataGridView2.EnableHeadersVisualStyles = false;
             dataGridView2.ColumnHeadersDefaultCellStyle.ForeColor = Color.FromArgb(32, 122, 125);
             dataGridView2.ColumnHeadersDefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
             radioButtonUser.Checked = true;
         }
-
+        
+        //Use this on Container Database
         private bool CheckOnlyCommon()
         {
             string query = "ALTER SESSION SET \"_ORACLE_SCRIPT\" = true";

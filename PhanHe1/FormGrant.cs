@@ -27,54 +27,28 @@ namespace PhanHe1
         {
             if(radioButtonRU.Checked)
             {
-                labelName = "Tên User: ";
-                changeLabelName(labelName);
                 panelNotRU.Hide(); 
                 panel2.Show();
                 checkBoxOpion.Checked = false;
             }
         }
 
-        private void radioButtonRole_CheckedChanged(object sender, EventArgs e)
-        {
-            if (radioButtonRole.Checked)
-            {
-                labelName = "Tên Role: ";
-                changeLabelName(labelName);
-                panelNotRU.Show();
-                panel2.Hide();
-                checkBoxOpion.Checked = false;
-                checkBoxOpion.Show();
-
-
-            }
-            
-        }
 
         private void radioButtonUser_CheckedChanged(object sender, EventArgs e)
         {
             if( radioButtonUser.Checked)
             {
-                labelName = "Tên User: ";
-                changeLabelName(labelName);
                 panelNotRU.Show();
                 panel2.Hide();
                 checkBoxOpion.Show();
-
-
             }
 
         }
-        private void changeLabelName(string t)
-        {
-            labelNameG.Text = t;
-        }
-
 
 
         private void buttonGrant_Click(object sender, EventArgs e)
         {
-            if (radioButtonRole.Checked || radioButtonUser.Checked)
+            if (radioButtonUser.Checked)
             {
 
                 string name = textNameG.Text.Trim();
@@ -89,6 +63,11 @@ namespace PhanHe1
                 string spe_right = "";
                 string col = "";
 
+                if (checkBoxCustom.Checked)
+                {
+                    right += textBoxTable.Text.Trim();
+                    table = "";
+                }
                 if (checkBoxI.Checked)
                 {
                     right += "INSERT";
@@ -105,7 +84,6 @@ namespace PhanHe1
                 {
                     spe_right += "UPDATE";
                     col = textBox1.Text;
-
                 }
 
                 // Kiểm tra xem chuỗi quyền có rỗng không
@@ -115,7 +93,11 @@ namespace PhanHe1
                     string grantQuery = "";
                     if (right != "")
                     {
-                        grantQuery = "GRANT " + right + " ON sys." + table + " TO " + name + " " + option ;
+                        if (string.IsNullOrEmpty(table) )
+                        {
+                            grantQuery = "GRANT " + right + " TO " + name + " " + option;
+                        }    
+                        else grantQuery = "GRANT " + right + " ON PHANHE2." + table + " TO " + name + " " + option ;
                        //MessageBox.Show(grantQuery);
                         try
                         {
@@ -133,7 +115,7 @@ namespace PhanHe1
                     {
                         if (col != "" )
                         {
-                            spe_grantQuery = "GRANT " + spe_right + " (" + col + ")" + " ON sys." + table + " TO " + name + " " + option;
+                            spe_grantQuery = "GRANT " + spe_right + " (" + col + ")" + " ON PHANHE2." + table + " TO " + name + " " + option;
                             //MessageBox.Show(spe_grantQuery);
 
                             try
@@ -181,12 +163,7 @@ namespace PhanHe1
             }  
         }
 
-      
-
-        private void textBoxRU_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+     
 
         private void buttonRU_Click(object sender, EventArgs e)
         {
@@ -216,9 +193,36 @@ namespace PhanHe1
             }
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
 
+        private void checkCustom_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxCustom.Checked)
+            {
+                labelTable.Text = "Tên quyền";
+                checkAllCheckBoxes(false);
+                enableAllCheckBoxes(false);
+            }
+            else
+            {
+                labelTable.Text = "Tên bảng";
+                enableAllCheckBoxes();
+            }
+        }
+
+        private void enableAllCheckBoxes(bool enable = true)
+        {
+            checkBoxI.Enabled = enable;
+            checkBoxD.Enabled = enable;
+            checkBoxU.Enabled = enable;
+            checkBoxS.Enabled = enable;
+        }
+
+        private void checkAllCheckBoxes(bool check = true)
+        {
+            checkBoxI.Checked = check;
+            checkBoxD.Checked = check;
+            checkBoxU.Checked = check;
+            checkBoxS.Checked = check;
         }
     }
 }

@@ -204,6 +204,11 @@ namespace PhanHe1
             OpenChildForm(new FormDel(), sender);
         }
 
+        private void btnAudit_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FormAudit(), sender);
+
+        }
         private void label1_Click(object sender, EventArgs e)
         {
             if (!OracleDataProvider.PH1) return;
@@ -213,5 +218,7 @@ namespace PhanHe1
             this.Close();
             f.Show();
         }
+
+
     }
 }

@@ -96,7 +96,7 @@
             this.panelExecuteGR.Location = new System.Drawing.Point(12, 81);
             this.panelExecuteGR.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelExecuteGR.Name = "panelExecuteGR";
-            this.panelExecuteGR.Size = new System.Drawing.Size(833, 412);
+            this.panelExecuteGR.Size = new System.Drawing.Size(853, 372);
             this.panelExecuteGR.TabIndex = 1;
             // 
             // FormGrant_Revoke
