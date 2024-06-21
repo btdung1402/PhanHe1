@@ -36,7 +36,6 @@
             this.btnPriv = new System.Windows.Forms.Button();
             this.btnList = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.panelTitleBar = new System.Windows.Forms.Panel();
             this.btnMinimine = new System.Windows.Forms.Button();
             this.btnMaximine = new System.Windows.Forms.Button();
@@ -48,6 +47,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblUser = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             this.panelTitleBar.SuspendLayout();
@@ -209,18 +209,6 @@
             this.panelLogo.Size = new System.Drawing.Size(303, 80);
             this.panelLogo.TabIndex = 1;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.Color.LightGray;
-            this.label1.Location = new System.Drawing.Point(71, 22);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(160, 36);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Phân hệ 1";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
             // panelTitleBar
             // 
             this.panelTitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(122)))), ((int)(((byte)(125)))));
@@ -369,6 +357,18 @@
             this.panel1.Size = new System.Drawing.Size(280, 1);
             this.panel1.TabIndex = 7;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.Color.LightGray;
+            this.label1.Location = new System.Drawing.Point(71, 22);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(160, 36);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Phân hệ 1";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
             // FormMainMenu_PH1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -417,7 +417,7 @@
         private System.Windows.Forms.Label lblGroupName;
         private System.Windows.Forms.Button btnDel;
         private System.Windows.Forms.Button btnLogout;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnAudit;
+        private System.Windows.Forms.Label label1;
     }
 }

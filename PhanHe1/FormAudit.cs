@@ -62,6 +62,7 @@ namespace PhanHe1
                     "FROM (\r\n    SELECT USERNAME, TIMESTAMP, OWNER, OBJ_NAME, ACTION_NAME, SQL_TEXT, SQL_BIND, CURRENT_USER \r\n    FROM DBA_AUDIT_TRAIL \r\n    ORDER BY EXTENDED_TIMESTAMP DESC\r\n)\r\n" +
                     "WHERE ROWNUM <= 100";
                 Load_Data();
+                btnManageAudit.Enabled = true;
             }
         }
 
@@ -73,17 +74,20 @@ namespace PhanHe1
                     "FROM DBA_FGA_AUDIT_TRAIL\r\n" +
                     "ORDER BY EXTENDED_TIMESTAMP DESC";
                 Load_Data();
+                btnManageAudit.Enabled = false;
             }
         }
 
         private void btnRefresh_Click(object sender, EventArgs e)
         {
             Load_Data();
+            MessageBox.Show("Làm mới dữ liệu thành công.");
         }
 
-        private void btnAddAudit_Click(object sender, EventArgs e)
+        private void btnManageAudit_Click(object sender, EventArgs e)
         {
-
+            FormAuditManage f = new FormAuditManage();
+            f.ShowDialog();
         }
     }
 

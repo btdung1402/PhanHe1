@@ -134,6 +134,7 @@
       <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
     </Reference>
     <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -153,6 +154,12 @@
     </Compile>
     <Compile Include="FormAdd.Designer.cs">
       <DependentUpon>FormAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAuditManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAuditManage.Designer.cs">
+      <DependentUpon>FormAuditManage.cs</DependentUpon>
     </Compile>
     <Compile Include="FormAudit.cs">
       <SubType>Form</SubType>
@@ -242,6 +249,9 @@
     <Compile Include="ThemeColor.cs" />
     <EmbeddedResource Include="FormAdd.resx">
       <DependentUpon>FormAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAuditManage.resx">
+      <DependentUpon>FormAuditManage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormAudit.resx">
       <DependentUpon>FormAudit.cs</DependentUpon>

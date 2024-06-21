@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Oracle.ManagedDataAccess.Client;
 using System.Windows.Forms;
+using System.Management.Instrumentation;
 
 namespace PhanHe1
 {
@@ -17,12 +18,13 @@ namespace PhanHe1
         public FormNotification()
         {
             InitializeComponent();
-            dtgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            //dtgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
         }
 
         private void btnRefresh_Click(object sender, EventArgs e)
         {
             Load_Data();
+            MessageBox.Show("Làm mới dữ liệu thành công.");
         }
 
         private void FormNotificationcs_Load(object sender, EventArgs e)
@@ -46,7 +48,10 @@ namespace PhanHe1
                     dtgv.BackgroundColor = oldColor;
                 }
 
-                dtgv.DataSource = OracleDataProvider.Instance.ExecuteQuery(query);
+                DataTable data = OracleDataProvider.Instance.ExecuteQuery(query);
+                dtgv.DataSource = data;
+                if (data.Rows.Count == 0) 
+                    MessageBox.Show("Bạn chưa có thông báo nào.");
             }
             catch (OracleException ex)
             {

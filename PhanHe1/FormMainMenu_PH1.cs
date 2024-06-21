@@ -20,6 +20,19 @@ namespace PhanHe1
         private Button currentBtn;
         private Form activeForm;
         private Point oldP;
+        private static FormMainMenu_PH1 _instance;
+        public static FormMainMenu_PH1 Instance
+        {
+            get
+            {
+                if (_instance == null || _instance.IsDisposed)
+                {
+                    _instance = new FormMainMenu_PH1();
+                }
+                return _instance;
+            }
+        }
+
         //Constructor
         public FormMainMenu_PH1()
         {
@@ -27,8 +40,8 @@ namespace PhanHe1
             btnCloseChildForm.Visible = false;
             this.Text = string.Empty; // Disable the title text
             this.ControlBox = false; // Disable Control box
-            //this.FormBorderStyle = FormBorderStyle.FixedSingle; // Disable window resizing
-            this.FormBorderStyle = FormBorderStyle.Sizable; // Enable window resizing
+            this.FormBorderStyle = FormBorderStyle.FixedSingle; // Disable window resizing
+           //this.FormBorderStyle = FormBorderStyle.Sizable; // Enable window resizing
             btnMaximine.Enabled = false; // Disable the custom maximine button
             oldP = lblTitle.Location;
         }
@@ -213,12 +226,9 @@ namespace PhanHe1
         {
             if (!OracleDataProvider.PH1) return;
 
-            FormMainMenu_PH2 f = new FormMainMenu_PH2();
-            _relog = true;
-            this.Close();
-            f.Show();
+            FormMainMenu_PH2.Instance.Show();
+            this.Hide();
         }
-
 
     }
 }

@@ -19,11 +19,12 @@ namespace PhanHe1
         public FormAdd()
         {
             InitializeComponent();
-            CheckOnlyCommon();
+            //CheckOnlyCommon();
             LoadDataForComboBox();
 
         }
 
+        // Use for Container Database
         private bool CheckOnlyCommon()
         {
             string query = "ALTER SESSION SET \"_ORACLE_SCRIPT\" = true";
