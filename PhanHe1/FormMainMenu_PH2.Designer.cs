@@ -29,24 +29,25 @@
         private void InitializeComponent()
         {
             this.panelMenu = new System.Windows.Forms.Panel();
-            this.panelLogo = new System.Windows.Forms.Panel();
-            this.panelTitleBar = new System.Windows.Forms.Panel();
-            this.btnMinimine = new System.Windows.Forms.Button();
-            this.btnMaximine = new System.Windows.Forms.Button();
-            this.btnClose = new System.Windows.Forms.Button();
-            this.lblTitle = new System.Windows.Forms.Label();
-            this.panelDesktop = new System.Windows.Forms.Panel();
-            this.lblGroupName = new System.Windows.Forms.Label();
-            this.lblUser = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnCloseChildForm = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
             this.btnNotification = new System.Windows.Forms.Button();
             this.btnGrantRevoke = new System.Windows.Forms.Button();
             this.btnPriv = new System.Windows.Forms.Button();
             this.btnList = new System.Windows.Forms.Button();
+            this.panelLogo = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.panelTitleBar = new System.Windows.Forms.Panel();
+            this.btnMinimine = new System.Windows.Forms.Button();
+            this.btnMaximine = new System.Windows.Forms.Button();
+            this.btnClose = new System.Windows.Forms.Button();
+            this.btnCloseChildForm = new System.Windows.Forms.Button();
+            this.lblTitle = new System.Windows.Forms.Label();
+            this.panelDesktop = new System.Windows.Forms.Panel();
+            this.lblGroupName = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblUser = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             this.panelTitleBar.SuspendLayout();
@@ -58,6 +59,7 @@
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
             this.panelMenu.Controls.Add(this.btnLogout);
+            this.panelMenu.Controls.Add(this.button1);
             this.panelMenu.Controls.Add(this.btnNotification);
             this.panelMenu.Controls.Add(this.btnGrantRevoke);
             this.panelMenu.Controls.Add(this.btnPriv);
@@ -67,162 +69,8 @@
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(303, 553);
+            this.panelMenu.Size = new System.Drawing.Size(341, 744);
             this.panelMenu.TabIndex = 0;
-            // 
-            // panelLogo
-            // 
-            this.panelLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
-            this.panelLogo.Controls.Add(this.label1);
-            this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelLogo.Location = new System.Drawing.Point(0, 0);
-            this.panelLogo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(303, 80);
-            this.panelLogo.TabIndex = 1;
-            // 
-            // panelTitleBar
-            // 
-            this.panelTitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(122)))), ((int)(((byte)(125)))));
-            this.panelTitleBar.Controls.Add(this.btnMinimine);
-            this.panelTitleBar.Controls.Add(this.btnMaximine);
-            this.panelTitleBar.Controls.Add(this.btnClose);
-            this.panelTitleBar.Controls.Add(this.btnCloseChildForm);
-            this.panelTitleBar.Controls.Add(this.lblTitle);
-            this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTitleBar.ForeColor = System.Drawing.Color.White;
-            this.panelTitleBar.Location = new System.Drawing.Point(303, 0);
-            this.panelTitleBar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panelTitleBar.Name = "panelTitleBar";
-            this.panelTitleBar.Size = new System.Drawing.Size(885, 80);
-            this.panelTitleBar.TabIndex = 1;
-            this.panelTitleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitleBar_MouseDown);
-            // 
-            // btnMinimine
-            // 
-            this.btnMinimine.FlatAppearance.BorderSize = 0;
-            this.btnMinimine.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMinimine.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
-            this.btnMinimine.Location = new System.Drawing.Point(780, 0);
-            this.btnMinimine.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnMinimine.Name = "btnMinimine";
-            this.btnMinimine.Size = new System.Drawing.Size(29, 30);
-            this.btnMinimine.TabIndex = 5;
-            this.btnMinimine.Text = "-";
-            this.btnMinimine.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnMinimine.UseVisualStyleBackColor = true;
-            this.btnMinimine.Click += new System.EventHandler(this.btnMinimine_Click);
-            // 
-            // btnMaximine
-            // 
-            this.btnMaximine.FlatAppearance.BorderSize = 0;
-            this.btnMaximine.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMaximine.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.btnMaximine.Location = new System.Drawing.Point(816, 0);
-            this.btnMaximine.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnMaximine.Name = "btnMaximine";
-            this.btnMaximine.Size = new System.Drawing.Size(29, 30);
-            this.btnMaximine.TabIndex = 6;
-            this.btnMaximine.Text = "O";
-            this.btnMaximine.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnMaximine.UseVisualStyleBackColor = true;
-            this.btnMaximine.Click += new System.EventHandler(this.btnMaximine_Click);
-            // 
-            // btnClose
-            // 
-            this.btnClose.FlatAppearance.BorderSize = 0;
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.btnClose.Location = new System.Drawing.Point(852, 0);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(29, 30);
-            this.btnClose.TabIndex = 7;
-            this.btnClose.Text = "X";
-            this.btnClose.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnClose.UseVisualStyleBackColor = true;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
-            // lblTitle
-            // 
-            this.lblTitle.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblTitle.AutoSize = true;
-            this.lblTitle.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Bold);
-            this.lblTitle.Location = new System.Drawing.Point(357, 26);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(182, 33);
-            this.lblTitle.TabIndex = 0;
-            this.lblTitle.Text = "TRANG CHỦ";
-            this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panelDesktop
-            // 
-            this.panelDesktop.Controls.Add(this.lblGroupName);
-            this.panelDesktop.Controls.Add(this.pictureBox1);
-            this.panelDesktop.Controls.Add(this.lblUser);
-            this.panelDesktop.Controls.Add(this.panel1);
-            this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelDesktop.Location = new System.Drawing.Point(303, 80);
-            this.panelDesktop.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panelDesktop.Name = "panelDesktop";
-            this.panelDesktop.Size = new System.Drawing.Size(885, 473);
-            this.panelDesktop.TabIndex = 2;
-            // 
-            // lblGroupName
-            // 
-            this.lblGroupName.AutoSize = true;
-            this.lblGroupName.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGroupName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(122)))), ((int)(((byte)(125)))));
-            this.lblGroupName.Location = new System.Drawing.Point(316, 242);
-            this.lblGroupName.Name = "lblGroupName";
-            this.lblGroupName.Size = new System.Drawing.Size(346, 36);
-            this.lblGroupName.TabIndex = 10;
-            this.lblGroupName.Text = "Thực hiện bởi Nhóm 11";
-            // 
-            // lblUser
-            // 
-            this.lblUser.AutoSize = true;
-            this.lblUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(122)))), ((int)(((byte)(125)))));
-            this.lblUser.Location = new System.Drawing.Point(23, 32);
-            this.lblUser.Name = "lblUser";
-            this.lblUser.Size = new System.Drawing.Size(150, 36);
-            this.lblUser.TabIndex = 8;
-            this.lblUser.Text = "Xin chào!";
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(122)))), ((int)(((byte)(125)))));
-            this.panel1.Location = new System.Drawing.Point(29, 71);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(280, 1);
-            this.panel1.TabIndex = 7;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::PhanHe1.Properties.Resources.icons8_customs_officer_78;
-            this.pictureBox1.Location = new System.Drawing.Point(171, 180);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(193, 146);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 9;
-            this.pictureBox1.TabStop = false;
-            // 
-            // btnCloseChildForm
-            // 
-            this.btnCloseChildForm.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnCloseChildForm.FlatAppearance.BorderSize = 0;
-            this.btnCloseChildForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCloseChildForm.Image = global::PhanHe1.Properties.Resources.icons8_x_48;
-            this.btnCloseChildForm.Location = new System.Drawing.Point(0, 0);
-            this.btnCloseChildForm.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnCloseChildForm.Name = "btnCloseChildForm";
-            this.btnCloseChildForm.Size = new System.Drawing.Size(75, 80);
-            this.btnCloseChildForm.TabIndex = 1;
-            this.btnCloseChildForm.UseVisualStyleBackColor = true;
-            this.btnCloseChildForm.Click += new System.EventHandler(this.btnCloseChildForm_Click);
             // 
             // btnLogout
             // 
@@ -233,11 +81,11 @@
             this.btnLogout.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnLogout.Image = global::PhanHe1.Properties.Resources.icons8_logout_48;
             this.btnLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLogout.Location = new System.Drawing.Point(0, 320);
+            this.btnLogout.Location = new System.Drawing.Point(0, 460);
             this.btnLogout.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-            this.btnLogout.Size = new System.Drawing.Size(303, 60);
+            this.btnLogout.Padding = new System.Windows.Forms.Padding(14, 0, 0, 0);
+            this.btnLogout.Size = new System.Drawing.Size(341, 75);
             this.btnLogout.TabIndex = 9;
             this.btnLogout.Text = " Đăng xuất";
             this.btnLogout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -254,11 +102,11 @@
             this.btnNotification.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnNotification.Image = global::PhanHe1.Properties.Resources.icons8_notification_48;
             this.btnNotification.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNotification.Location = new System.Drawing.Point(0, 260);
+            this.btnNotification.Location = new System.Drawing.Point(0, 325);
             this.btnNotification.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnNotification.Name = "btnNotification";
-            this.btnNotification.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-            this.btnNotification.Size = new System.Drawing.Size(303, 60);
+            this.btnNotification.Padding = new System.Windows.Forms.Padding(14, 0, 0, 0);
+            this.btnNotification.Size = new System.Drawing.Size(341, 75);
             this.btnNotification.TabIndex = 8;
             this.btnNotification.Text = " Thông báo";
             this.btnNotification.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -275,11 +123,11 @@
             this.btnGrantRevoke.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnGrantRevoke.Image = global::PhanHe1.Properties.Resources.icons8_grant_48;
             this.btnGrantRevoke.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGrantRevoke.Location = new System.Drawing.Point(0, 200);
+            this.btnGrantRevoke.Location = new System.Drawing.Point(0, 250);
             this.btnGrantRevoke.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnGrantRevoke.Name = "btnGrantRevoke";
-            this.btnGrantRevoke.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-            this.btnGrantRevoke.Size = new System.Drawing.Size(303, 60);
+            this.btnGrantRevoke.Padding = new System.Windows.Forms.Padding(14, 0, 0, 0);
+            this.btnGrantRevoke.Size = new System.Drawing.Size(341, 75);
             this.btnGrantRevoke.TabIndex = 3;
             this.btnGrantRevoke.Text = " Trao/Tước quyền";
             this.btnGrantRevoke.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -296,11 +144,11 @@
             this.btnPriv.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnPriv.Image = global::PhanHe1.Properties.Resources.icons8_privilege_48;
             this.btnPriv.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPriv.Location = new System.Drawing.Point(0, 140);
+            this.btnPriv.Location = new System.Drawing.Point(0, 175);
             this.btnPriv.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnPriv.Name = "btnPriv";
-            this.btnPriv.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-            this.btnPriv.Size = new System.Drawing.Size(303, 60);
+            this.btnPriv.Padding = new System.Windows.Forms.Padding(14, 0, 0, 0);
+            this.btnPriv.Size = new System.Drawing.Size(341, 75);
             this.btnPriv.TabIndex = 2;
             this.btnPriv.Text = " Quyền User/Role";
             this.btnPriv.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -317,11 +165,11 @@
             this.btnList.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnList.Image = global::PhanHe1.Properties.Resources.icons8_list_48;
             this.btnList.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnList.Location = new System.Drawing.Point(0, 80);
+            this.btnList.Location = new System.Drawing.Point(0, 100);
             this.btnList.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnList.Name = "btnList";
-            this.btnList.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-            this.btnList.Size = new System.Drawing.Size(303, 60);
+            this.btnList.Padding = new System.Windows.Forms.Padding(14, 0, 0, 0);
+            this.btnList.Size = new System.Drawing.Size(341, 75);
             this.btnList.TabIndex = 1;
             this.btnList.Text = " Xem tất cả User";
             this.btnList.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -329,29 +177,196 @@
             this.btnList.UseVisualStyleBackColor = true;
             this.btnList.Click += new System.EventHandler(this.btnList_Click);
             // 
+            // panelLogo
+            // 
+            this.panelLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
+            this.panelLogo.Controls.Add(this.label1);
+            this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelLogo.Location = new System.Drawing.Point(0, 0);
+            this.panelLogo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panelLogo.Name = "panelLogo";
+            this.panelLogo.Size = new System.Drawing.Size(341, 100);
+            this.panelLogo.TabIndex = 1;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.LightGray;
-            this.label1.Location = new System.Drawing.Point(65, 23);
+            this.label1.Location = new System.Drawing.Point(73, 29);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(160, 36);
+            this.label1.Size = new System.Drawing.Size(190, 40);
             this.label1.TabIndex = 2;
             this.label1.Text = "Phân hệ 2";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
+            // panelTitleBar
+            // 
+            this.panelTitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(122)))), ((int)(((byte)(125)))));
+            this.panelTitleBar.Controls.Add(this.btnMinimine);
+            this.panelTitleBar.Controls.Add(this.btnMaximine);
+            this.panelTitleBar.Controls.Add(this.btnClose);
+            this.panelTitleBar.Controls.Add(this.btnCloseChildForm);
+            this.panelTitleBar.Controls.Add(this.lblTitle);
+            this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelTitleBar.ForeColor = System.Drawing.Color.White;
+            this.panelTitleBar.Location = new System.Drawing.Point(341, 0);
+            this.panelTitleBar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panelTitleBar.Name = "panelTitleBar";
+            this.panelTitleBar.Size = new System.Drawing.Size(1237, 100);
+            this.panelTitleBar.TabIndex = 1;
+            this.panelTitleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitleBar_MouseDown);
+            // 
+            // btnMinimine
+            // 
+            this.btnMinimine.FlatAppearance.BorderSize = 0;
+            this.btnMinimine.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMinimine.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
+            this.btnMinimine.Location = new System.Drawing.Point(878, 0);
+            this.btnMinimine.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnMinimine.Name = "btnMinimine";
+            this.btnMinimine.Size = new System.Drawing.Size(33, 38);
+            this.btnMinimine.TabIndex = 5;
+            this.btnMinimine.Text = "-";
+            this.btnMinimine.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnMinimine.UseVisualStyleBackColor = true;
+            this.btnMinimine.Click += new System.EventHandler(this.btnMinimine_Click);
+            // 
+            // btnMaximine
+            // 
+            this.btnMaximine.FlatAppearance.BorderSize = 0;
+            this.btnMaximine.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMaximine.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.btnMaximine.Location = new System.Drawing.Point(918, 0);
+            this.btnMaximine.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnMaximine.Name = "btnMaximine";
+            this.btnMaximine.Size = new System.Drawing.Size(33, 38);
+            this.btnMaximine.TabIndex = 6;
+            this.btnMaximine.Text = "O";
+            this.btnMaximine.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnMaximine.UseVisualStyleBackColor = true;
+            this.btnMaximine.Click += new System.EventHandler(this.btnMaximine_Click);
+            // 
+            // btnClose
+            // 
+            this.btnClose.FlatAppearance.BorderSize = 0;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.btnClose.Location = new System.Drawing.Point(958, 0);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(33, 38);
+            this.btnClose.TabIndex = 7;
+            this.btnClose.Text = "X";
+            this.btnClose.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // btnCloseChildForm
+            // 
+            this.btnCloseChildForm.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnCloseChildForm.FlatAppearance.BorderSize = 0;
+            this.btnCloseChildForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCloseChildForm.Image = global::PhanHe1.Properties.Resources.icons8_x_48;
+            this.btnCloseChildForm.Location = new System.Drawing.Point(0, 0);
+            this.btnCloseChildForm.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCloseChildForm.Name = "btnCloseChildForm";
+            this.btnCloseChildForm.Size = new System.Drawing.Size(84, 100);
+            this.btnCloseChildForm.TabIndex = 1;
+            this.btnCloseChildForm.UseVisualStyleBackColor = true;
+            this.btnCloseChildForm.Click += new System.EventHandler(this.btnCloseChildForm_Click);
+            // 
+            // lblTitle
+            // 
+            this.lblTitle.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Bold);
+            this.lblTitle.Location = new System.Drawing.Point(522, 32);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(213, 38);
+            this.lblTitle.TabIndex = 0;
+            this.lblTitle.Text = "TRANG CHỦ";
+            this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panelDesktop
+            // 
+            this.panelDesktop.Controls.Add(this.lblGroupName);
+            this.panelDesktop.Controls.Add(this.pictureBox1);
+            this.panelDesktop.Controls.Add(this.lblUser);
+            this.panelDesktop.Controls.Add(this.panel1);
+            this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelDesktop.Location = new System.Drawing.Point(341, 100);
+            this.panelDesktop.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panelDesktop.Name = "panelDesktop";
+            this.panelDesktop.Size = new System.Drawing.Size(1237, 644);
+            this.panelDesktop.TabIndex = 2;
+            this.panelDesktop.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDesktop_Paint);
+            // 
+            // lblGroupName
+            // 
+            this.lblGroupName.AutoSize = true;
+            this.lblGroupName.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGroupName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(122)))), ((int)(((byte)(125)))));
+            this.lblGroupName.Location = new System.Drawing.Point(356, 302);
+            this.lblGroupName.Name = "lblGroupName";
+            this.lblGroupName.Size = new System.Drawing.Size(410, 40);
+            this.lblGroupName.TabIndex = 10;
+            this.lblGroupName.Text = "Thực hiện bởi Nhóm 11";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::PhanHe1.Properties.Resources.icons8_customs_officer_78;
+            this.pictureBox1.Location = new System.Drawing.Point(192, 225);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(217, 182);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
+            // 
+            // lblUser
+            // 
+            this.lblUser.AutoSize = true;
+            this.lblUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(122)))), ((int)(((byte)(125)))));
+            this.lblUser.Location = new System.Drawing.Point(26, 40);
+            this.lblUser.Name = "lblUser";
+            this.lblUser.Size = new System.Drawing.Size(176, 40);
+            this.lblUser.TabIndex = 8;
+            this.lblUser.Text = "Xin chào!";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(122)))), ((int)(((byte)(125)))));
+            this.panel1.Location = new System.Drawing.Point(33, 89);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(315, 1);
+            this.panel1.TabIndex = 7;
+            // 
+            // button1
+            // 
+            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button1.Location = new System.Drawing.Point(0, 400);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(341, 60);
+            this.button1.TabIndex = 10;
+            this.button1.Text = "Xem Thông Tin";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // FormMainMenu_PH2
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(1188, 553);
+            this.ClientSize = new System.Drawing.Size(1578, 744);
             this.Controls.Add(this.panelDesktop);
             this.Controls.Add(this.panelTitleBar);
             this.Controls.Add(this.panelMenu);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.MinimumSize = new System.Drawing.Size(899, 448);
+            this.MinimumSize = new System.Drawing.Size(1009, 546);
             this.Name = "FormMainMenu_PH2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "User Administration";
@@ -390,5 +405,6 @@
         private System.Windows.Forms.Button btnNotification;
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button1;
     }
 }
