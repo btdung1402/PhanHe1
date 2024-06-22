@@ -39,9 +39,14 @@ namespace PhanHe1
 
                 string querySinhVien;
 
-                if (vaitro == "Trưởng khoa" || vaitro == "Giáo vụ")
+                if ( vaitro == "Giáo vụ")
                 {
                     querySinhVien = "SELECT * FROM PHANHE2.PhanCong";
+                }
+                else if (vaitro == "Trưởng khoa" )
+                {
+                    querySinhVien = "SELECT * FROM PHANHE2.PhanCong";
+                    pnthem.Visible = true;
                 }
                 else if (vaitro == "Giảng viên")
                 {
@@ -50,6 +55,7 @@ namespace PhanHe1
                 else if (vaitro == "Trưởng đơn vị")
                 {
                     querySinhVien=  " select* from Phanhe2.V_TRGDV_PHANCONG_HP";
+                    pnthem.Visible = true;
                 }
                 else if (vaitro == null)
                 {
@@ -67,6 +73,120 @@ namespace PhanHe1
 
                 // Assuming you have a DataGridView control named dataGridView1
                 dataGridView1.DataSource = dataSinhVien;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message);
+            }
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_xoa_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string queryRole = "SELECT Vaitro, MaNV FROM PHANHE2.V_NHANSU";
+                // Execute the query to get the role and MaNV
+                DataTable dataRole = OracleDataProvider.Instance.ExecuteQuery(queryRole);
+
+                if (dataRole.Rows.Count > 0)
+                {
+                    // Get the role and MaNV from the first row
+                    string vaitro = dataRole.Rows[0]["Vaitro"].ToString();
+                    string MANV = dataRole.Rows[0]["MaNV"].ToString();
+
+
+
+
+
+                    // Create the full query string
+                    string queryU_sdt;
+                    // Only execute the update if the role is "Giảng viên"
+                    if (vaitro == "Trưởng đơn vị")
+                    {
+                        queryU_sdt = $"DELETE FROM PHANHE2.V_TRGDV_PHANCONG_HP WHERE PHANCONG_ID ={tbpcid.Text}";
+                        OracleDataProvider.Instance.ExecuteQuery(queryU_sdt);
+                        MessageBox.Show("Delete successful.");
+                    }
+                    else if(vaitro=="Trưởng khoa")
+                    {
+                        queryU_sdt = $"DELETE FROM PHANHE2.V_PHANCONG_TRUONGKHOA WHERE PHANCONG_ID ={tbpcid.Text}";
+                        OracleDataProvider.Instance.ExecuteQuery(queryU_sdt);
+                        MessageBox.Show("Delete successful.");
+                    }
+                    else
+                    {
+                        MessageBox.Show("role khong phu hơp de drop.");
+                    }
+
+
+                    loadPhanCong();
+
+                }
+                else
+                {
+                    MessageBox.Show("No role data found.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message);
+            }
+        }
+
+        private void btnI_Click(object sender, EventArgs e)
+        {
+
+            try
+            {
+                string queryRole = "SELECT Vaitro, MaNV FROM PHANHE2.V_NHANSU";
+                // Execute the query to get the role and MaNV
+                DataTable dataRole = OracleDataProvider.Instance.ExecuteQuery(queryRole);
+
+                if (dataRole.Rows.Count > 0)
+                {
+                    // Get the role and MaNV from the first row
+                    string vaitro = dataRole.Rows[0]["Vaitro"].ToString();
+                    string MANV = dataRole.Rows[0]["MaNV"].ToString();
+
+
+
+
+
+                    // Create the full query string
+                    string queryU_sdt;
+                    // Only execute the update if the role is "Giảng viên"
+                    if (vaitro == "Trưởng đơn vị")
+                    {
+                        queryU_sdt = $"INSERT INTO phanhe2.V_TRGDV_PHANCONG_HP (Phancong_id,Magv,MAHP,HK,NAM,MACT) VALUES({tbpcid.Text}, '{tbmagv.Text}','{tbmahp.Text}',{tbnam.Text},'{tbyear.Text}','{tbmact.Text}')";
+
+                        OracleDataProvider.Instance.ExecuteQuery(queryU_sdt);
+                        MessageBox.Show("Insert successful.");
+                    }
+                    else if(vaitro == "Trưởng khoa")
+                    {
+                        queryU_sdt = $"INSERT INTO phanhe2.V_PHANCONG_TRUONGKHOA (Phancong_id,Magv,MAHP,HK,NAM,MACT) VALUES({tbpcid.Text}, '{tbmagv.Text}','{tbmahp.Text}',{tbnam.Text},'{tbyear.Text}','{tbmact.Text}')";
+
+                        OracleDataProvider.Instance.ExecuteQuery(queryU_sdt);
+                        MessageBox.Show("Insert successful.");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Trưởng đơn vị mới được thêm phâm công");
+                    }
+
+                    // Reload the data
+                    loadPhanCong();
+
+                }
+                else
+                {
+                    MessageBox.Show("No role data found.");
+                }
             }
             catch (Exception ex)
             {

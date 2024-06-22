@@ -66,7 +66,7 @@
             // 
             // SDT
             // 
-            this.SDT.Location = new System.Drawing.Point(496, 348);
+            this.SDT.Location = new System.Drawing.Point(500, 312);
             this.SDT.Name = "SDT";
             this.SDT.Size = new System.Drawing.Size(109, 26);
             this.SDT.TabIndex = 1;
@@ -74,7 +74,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(496, 325);
+            this.label1.Location = new System.Drawing.Point(500, 289);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(109, 20);
             this.label1.TabIndex = 2;
@@ -103,6 +103,7 @@
             this.btn_d.TabIndex = 4;
             this.btn_d.Text = "Xoá Nhân sự";
             this.btn_d.UseVisualStyleBackColor = true;
+            this.btn_d.Click += new System.EventHandler(this.btn_d_Click);
             // 
             // btn_u
             // 
@@ -130,10 +131,11 @@
             this.panel1.Controls.Add(this.hoten);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.mans);
-            this.panel1.Location = new System.Drawing.Point(13, 293);
+            this.panel1.Location = new System.Drawing.Point(17, 265);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(481, 150);
+            this.panel1.Size = new System.Drawing.Size(481, 173);
             this.panel1.TabIndex = 6;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // label6
             // 
@@ -150,6 +152,7 @@
             this.phucap.Name = "phucap";
             this.phucap.Size = new System.Drawing.Size(109, 26);
             this.phucap.TabIndex = 28;
+            this.phucap.TextChanged += new System.EventHandler(this.phucap_TextChanged);
             // 
             // label5
             // 
@@ -166,6 +169,7 @@
             this.role.Name = "role";
             this.role.Size = new System.Drawing.Size(109, 26);
             this.role.TabIndex = 26;
+            this.role.TextChanged += new System.EventHandler(this.role_TextChanged);
             // 
             // birth
             // 
@@ -182,6 +186,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(109, 26);
             this.textBox1.TabIndex = 24;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label4
             // 
@@ -198,6 +203,7 @@
             this.in_s.Name = "in_s";
             this.in_s.Size = new System.Drawing.Size(109, 26);
             this.in_s.TabIndex = 22;
+            this.in_s.TextChanged += new System.EventHandler(this.in_s_TextChanged);
             // 
             // label3
             // 
@@ -214,6 +220,7 @@
             this.hoten.Name = "hoten";
             this.hoten.Size = new System.Drawing.Size(109, 26);
             this.hoten.TabIndex = 20;
+            this.hoten.TextChanged += new System.EventHandler(this.hoten_TextChanged);
             // 
             // label2
             // 
@@ -230,11 +237,12 @@
             this.mans.Name = "mans";
             this.mans.Size = new System.Drawing.Size(109, 26);
             this.mans.TabIndex = 18;
+            this.mans.TextChanged += new System.EventHandler(this.mans_TextChanged);
             // 
             // MaDV
             // 
             this.MaDV.AutoSize = true;
-            this.MaDV.Location = new System.Drawing.Point(500, 390);
+            this.MaDV.Location = new System.Drawing.Point(504, 354);
             this.MaDV.Name = "MaDV";
             this.MaDV.Size = new System.Drawing.Size(76, 20);
             this.MaDV.TabIndex = 8;
@@ -242,7 +250,7 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(500, 413);
+            this.textBox2.Location = new System.Drawing.Point(504, 377);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(109, 26);
             this.textBox2.TabIndex = 7;

@@ -39,6 +39,10 @@ namespace PhanHe1
                 {
                     queryDangKy = "SELECT * FROM PHANHE2.sinhvien";
                 }
+                else if(vaitro=="Trưởng khoa")
+                {
+                    queryDangKy = "SELECT * from PHANHE2.Dangky";
+                }
                
                 else if (vaitro == "Giáo vụ")
                 {
@@ -130,7 +134,7 @@ namespace PhanHe1
                         string queryU_sdt = $"UPDATE phanhe2.v_dangky SET {setClause} WHERE DangKy_id = '{tB_idDK.Text}'";
 
                         // Only execute the update if the role is "Giảng viên"
-                        if (vaitro == "Giảng viên"|| vaitro == "Trưởng đơn vị")
+                        if (vaitro == "Giảng viên"|| vaitro == "Trưởng đơn vị"||vaitro =="Trưởng khoa")
                         {
                             OracleDataProvider.Instance.ExecuteQuery(queryU_sdt);
                             MessageBox.Show("Update successful.");

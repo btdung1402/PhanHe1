@@ -98,7 +98,7 @@ namespace PhanHe1
                         // Create the full query string
                         string queryU_sdt = $"INSERT INTO phanhe2.SINHVIEN (MASV, HOTEN, PHAI, NGSINH, DCHI, DT, MACT, MANGANH) VALUES('{tbMSV.Text}', '{tBName.Text}','{tBS.Text}',TO_DATE('{tBDate.Text}', 'DD-MM-YYYY'),'{tBAddr.Text}','{tBPhone.Text}','{tBMCT.Text }','{tBMj.Text}')";
 
-                        // Only execute the update if the role is "Giảng viên"
+                        
                         if (vaitro == "Giáo vụ")
                         {
                             OracleDataProvider.Instance.ExecuteQuery(queryU_sdt);
