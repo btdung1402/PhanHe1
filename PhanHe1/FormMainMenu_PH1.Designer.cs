@@ -36,6 +36,7 @@
             this.btnPriv = new System.Windows.Forms.Button();
             this.btnList = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.panelTitleBar = new System.Windows.Forms.Panel();
             this.btnMinimine = new System.Windows.Forms.Button();
             this.btnMaximine = new System.Windows.Forms.Button();
@@ -47,7 +48,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblUser = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.labelRole = new System.Windows.Forms.Label();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             this.panelTitleBar.SuspendLayout();
@@ -209,6 +210,18 @@
             this.panelLogo.Size = new System.Drawing.Size(303, 80);
             this.panelLogo.TabIndex = 1;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.Color.LightGray;
+            this.label1.Location = new System.Drawing.Point(65, 23);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(160, 36);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Phân hệ 1";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
             // panelTitleBar
             // 
             this.panelTitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(122)))), ((int)(((byte)(125)))));
@@ -232,7 +245,7 @@
             this.btnMinimine.FlatAppearance.BorderSize = 0;
             this.btnMinimine.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMinimine.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
-            this.btnMinimine.Location = new System.Drawing.Point(780, 0);
+            this.btnMinimine.Location = new System.Drawing.Point(786, -1);
             this.btnMinimine.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnMinimine.Name = "btnMinimine";
             this.btnMinimine.Size = new System.Drawing.Size(29, 30);
@@ -248,7 +261,7 @@
             this.btnMaximine.FlatAppearance.BorderSize = 0;
             this.btnMaximine.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMaximine.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.btnMaximine.Location = new System.Drawing.Point(816, 0);
+            this.btnMaximine.Location = new System.Drawing.Point(821, -1);
             this.btnMaximine.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnMaximine.Name = "btnMaximine";
             this.btnMaximine.Size = new System.Drawing.Size(29, 30);
@@ -264,7 +277,7 @@
             this.btnClose.FlatAppearance.BorderSize = 0;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.btnClose.Location = new System.Drawing.Point(852, 0);
+            this.btnClose.Location = new System.Drawing.Point(856, -1);
             this.btnClose.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(29, 30);
@@ -293,7 +306,7 @@
             this.lblTitle.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Bold);
-            this.lblTitle.Location = new System.Drawing.Point(357, 26);
+            this.lblTitle.Location = new System.Drawing.Point(356, 26);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(182, 33);
             this.lblTitle.TabIndex = 0;
@@ -302,6 +315,7 @@
             // 
             // panelDesktop
             // 
+            this.panelDesktop.Controls.Add(this.labelRole);
             this.panelDesktop.Controls.Add(this.lblGroupName);
             this.panelDesktop.Controls.Add(this.pictureBox1);
             this.panelDesktop.Controls.Add(this.lblUser);
@@ -357,17 +371,16 @@
             this.panel1.Size = new System.Drawing.Size(280, 1);
             this.panel1.TabIndex = 7;
             // 
-            // label1
+            // labelRole
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.Color.LightGray;
-            this.label1.Location = new System.Drawing.Point(71, 22);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(160, 36);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Phân hệ 1";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.labelRole.AutoSize = true;
+            this.labelRole.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelRole.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(122)))), ((int)(((byte)(125)))));
+            this.labelRole.Location = new System.Drawing.Point(23, 93);
+            this.labelRole.Name = "labelRole";
+            this.labelRole.Size = new System.Drawing.Size(202, 29);
+            this.labelRole.TabIndex = 11;
+            this.labelRole.Text = "Vai trò của bạn là ";
             // 
             // FormMainMenu_PH1
             // 
@@ -378,6 +391,7 @@
             this.Controls.Add(this.panelDesktop);
             this.Controls.Add(this.panelTitleBar);
             this.Controls.Add(this.panelMenu);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MinimumSize = new System.Drawing.Size(899, 448);
             this.Name = "FormMainMenu_PH1";
@@ -419,5 +433,6 @@
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Button btnAudit;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelRole;
     }
 }

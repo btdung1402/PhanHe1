@@ -63,11 +63,15 @@ namespace PhanHe1
             {
                 string specialUsersConfig = ConfigurationManager.AppSettings["SpecialUsers"];
                 string[] specialUsers = specialUsersConfig.Split(',');
+
                 // Check if the username is in the list
 
                 if (specialUsers.Contains(username.ToLower()))
                 {
                     OracleDataProvider.PH1 = true;
+                    OracleDataProvider.ROLE = "ADMINISTRATOR";
+                    //MessageBox.Show(OracleDataProvider.ROLE);
+
                     FormMainMenu_PH1 f = new FormMainMenu_PH1();
                     this.Hide();
                     //f.FormClosed += MainMenu_FormClosed;
@@ -76,6 +80,17 @@ namespace PhanHe1
                 else
                 {
                     OracleDataProvider.PH1 = false;
+                    try
+                    {
+                        string query = "SELECT GRANTED_ROLE FROM USER_ROLE_PRIVS";
+                        DataTable dtb = OracleDataProvider.Instance.ExecuteQuery(query);
+                        OracleDataProvider.ROLE = dtb.Rows[0]["GRANTED_ROLE"].ToString().Trim().ToUpper();
+                        //MessageBox.Show(OracleDataProvider.ROLE);
+                    }
+                    catch (OracleException ex)
+                    {
+                        MessageBox.Show("Lỗi: " + ex.Message);
+                    }
                     FormMainMenu_PH2 f = new FormMainMenu_PH2();
                     this.Hide();
                     //f.FormClosed += MainMenu_FormClosed;

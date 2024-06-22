@@ -186,6 +186,7 @@ namespace PhanHe1
             string username = OracleDataProvider.Username.ToUpper();
             lblUser.Text = $"Xin chào, {username}!";
             panel1.Size = new System.Drawing.Size(lblUser.Width + 10, 1);
+            labelRole.Text = $"Vai trò của bạn là {OracleDataProvider.ROLE}";
         }
 
         private void btnPriv_Click(object sender, EventArgs e)

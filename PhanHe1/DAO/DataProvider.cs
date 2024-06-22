@@ -21,6 +21,8 @@ namespace PhanHe1.DAO
         private static string _connectionString = ConfigurationManager.ConnectionStrings["default_con"].ConnectionString;
         public static string Username { get; set; }
         public static bool PH1 { get; set; }
+        public static string ROLE { get; set; }
+
         private OracleDataProvider()   {     }
 
         public static OracleDataProvider Instance

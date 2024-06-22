@@ -8,268 +8,149 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Oracle.ManagedDataAccess.Client;
 
 namespace PhanHe1
 {
     public partial class PH2_NS : Form
     {
+        private string workingtable = null;
         public PH2_NS()
         {
             InitializeComponent();
+            dtgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dtgv.EnableHeadersVisualStyles = false;
+            dtgv.ColumnHeadersDefaultCellStyle.ForeColor = Color.FromArgb(32, 122, 125);
+            dtgv.ColumnHeadersDefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
+            workingtable = getWorkingTable();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
 
+        private string getWorkingTable()
+        {
+            string table = string.Empty;
+
+            // Allows SinhVien to select to show privileges.
+            if (OracleDataProvider.ROLE.ToUpper() == "SINHVIEN"
+                || OracleDataProvider.ROLE.ToUpper() == "TRUONGKHOA"
+                || OracleDataProvider.ROLE.ToUpper() == "ADMINISTRATOR")
+            {
+                table = "PHANHE2.NhanSu";
+            }
+
+            else if (OracleDataProvider.ROLE.ToUpper() == "NHANVIENCOBAN"
+                     || OracleDataProvider.ROLE.ToUpper() == "GIANGVIEN"
+                     || OracleDataProvider.ROLE.ToUpper() == "GIAOVU"
+                     || OracleDataProvider.ROLE.ToUpper() == "TRUONGDONVI")
+            {
+                table = "PHANHE2.V_NhanSu";
+            }
+            return table;
         }
-        private void LoadNhanSuData()
+        private void LoadData()
         {
-
 
             try
             {
-                string queryNhanSu;
-                if (/*user_name == "SV"*/0 ==1)
+                string queryNhanSu = $"SELECT * FROM {workingtable} ORDER BY MANV";
+
+                if (string.IsNullOrEmpty(queryNhanSu))
                 {
-                    queryNhanSu = "SELECT * FROM PHANHE2.NhanSu";
+                    MessageBox.Show("Không thể truy vấn đến bảng NhanSu.");
+                    return;
                 }
 
+                // Use OracleDataProvider to execute the query and get the DataTable for NhanSu
+                DataTable dataNhanSu = OracleDataProvider.Instance.ExecuteQuery(queryNhanSu);
+
+
+                // Assuming you have a DataGridView control named dataGridView1
+                dtgv.DataSource = dataNhanSu;
+
+
+            }
+            catch (OracleException ex)
+            {
+                if (ex.Number == 942) // ORA-00942: table or view does not exist
+                {
+                    // Handle the specific error here
+                    MessageBox.Show("Bạn không có quyền truy cập bảng NhanSu.");
+                }
                 else
                 {
-                    string queryRole = "SELECT Vaitro FROM PHANHE2.V_NHANSU";
-                    // Use OracleDataProvider to execute the query and get the DataTable for role
-                    DataTable dataRole = OracleDataProvider.Instance.ExecuteQuery(queryRole);
-
-                    if (dataRole.Rows.Count > 0)
-                    {
-                        // Get the role from the first row (assuming Vaitro is a single value)
-                        string vaitro = dataRole.Rows[0]["Vaitro"].ToString();
-
-
-
-                        if (vaitro == "Trưởng khoa")
-                        {
-                            queryNhanSu = "SELECT * FROM PHANHE2.NhanSu";
-                        }
-                        //
-                        else if(vaitro=="Nhân viên cơ bản" || vaitro=="Giảng viên"||vaitro== "Giáo vụ" || vaitro == "Trưởng đơn vị")
-                        {
-                            queryNhanSu = "SELECT * FROM PHANHE2.V_NhanSu";
-                            panel1.Visible = false;
-                            textBox2.Visible = false;
-                            MaDV.Visible = false;
-                            btn_d.Visible = false;
-                            btn_i.Visible = false;
-                        }
-                        else
-                        {
-                            queryNhanSu = "SELECT * FROM PHANHE2.V_NhanSu";
-                            panel1.Visible = false;
-                            textBox2.Visible = false;
-                            MaDV.Visible = false;
-                            btn_d.Visible = false;
-                            btn_i.Visible = false;
-                        }
-
-                        // Use OracleDataProvider to execute the query and get the DataTable for NhanSu
-                        DataTable dataNhanSu = OracleDataProvider.Instance.ExecuteQuery(queryNhanSu);
-
-
-                        // Assuming you have a DataGridView control named dataGridView1
-                        dataGridView1.DataSource = dataNhanSu;
-
-                    }
-                    else
-                    {
-                        MessageBox.Show("No role data found in V_NHANSU.");
-                    }
+                    // Handle other Oracle exceptions
+                    MessageBox.Show("Oracle Error: " + ex.Message);
                 }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("An error occurred: " + ex.Message);
             }
 
         }
 
         private void PH2_NS_Load(object sender, EventArgs e)
         {
-            LoadNhanSuData();
+            LoadData();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
 
-        }
 
         private void btn_i_Click(object sender, EventArgs e)
         {
-            try
-            {
-                string queryRole = "SELECT Vaitro, MaNV FROM PHANHE2.V_NHANSU";
-                // Execute the query to get the role and MaNV
-                DataTable dataRole = OracleDataProvider.Instance.ExecuteQuery(queryRole);
-
-                if (dataRole.Rows.Count > 0)
-                {
-                    // Get the role and MaNV from the first row
-                    string vaitro = dataRole.Rows[0]["Vaitro"].ToString();
-                    string MANV = dataRole.Rows[0]["MaNV"].ToString();
-
-
-                    // Create the full query string
-                    string queryU_sdt = $"INSERT INTO PHANHE2.NhanSu(MaNV,HOTEN,PHAI,NGSINH,PHUCAP,DT,VAITRO,MADV) VALUES('{mans.Text}','{hoten.Text}','{in_s.Text}',TO_DATE('{textBox1.Text}', 'DD-MM-YYYY'),{phucap.Text},'{SDT.Text}','{role.Text}','{textBox2.Text}') ";
-
-                    if (vaitro == "Trưởng khoa")
-                    {
-                        OracleDataProvider.Instance.ExecuteQuery(queryU_sdt);
-                        MessageBox.Show("Delete successful.");
-                    }
-                    else
-                    {
-                        MessageBox.Show("role khong phu hơp de them.");
-                    }
-
-                    LoadNhanSuData();
-
-                }
-                else
-                {
-                    MessageBox.Show("No role data found.");
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("An error occurred: " + ex.Message);
-            }
+            FormAddNhanSu f = new FormAddNhanSu();
+            f.ShowDialog();
 
         }
 
         private void btn_u_Click(object sender, EventArgs e)
         {
-            try
-            {
-                string queryRole = "SELECT Vaitro, MaNV FROM PHANHE2.V_NHANSU";
-                // Execute the query to get the role and MaNV
-                DataTable dataRole = OracleDataProvider.Instance.ExecuteQuery(queryRole);
-
-                if (dataRole.Rows.Count > 0)
-                {
-                    // Get the role and MaNV from the first row
-                    string vaitro = dataRole.Rows[0]["Vaitro"].ToString();
-                    string MANV = dataRole.Rows[0]["MaNV"].ToString();
-
-                    // Assuming you have a TextBox control named txtSDT to get the new SDT value
-                    string newSDT = SDT.Text;
-
-                    // Update query string
-                    string queryU_sdt = $"UPDATE PHANHE2.V_NHANSU SET DT = '{newSDT}' WHERE MANV = '{MANV}'";
-
-                    // Only execute the update if the role is "Nhân viên cơ bản"
-                    if (vaitro == "Nhân viên cơ bản" || vaitro=="Giảng viên" || vaitro == "Giáo vụ" || vaitro == "Trưởng đơn vị" || vaitro == "Trưởng khoa")
-                    {
-                        OracleDataProvider.Instance.ExecuteQuery(queryU_sdt);
-                        MessageBox.Show("Update successful.");
-                        
-
-
-                    }
-                    else
-                    {
-                        MessageBox.Show("role ko có quyền update");
-                    }
-                    LoadNhanSuData();
-                }
-                else
-                {
-                    MessageBox.Show("No role data found.");
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("An error occurred: " + ex.Message);
-            }
+           FormUpdateNhanSu f = new FormUpdateNhanSu();
+            f.ShowDialog();
+            LoadData();
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
 
-        }
 
         private void btn_d_Click(object sender, EventArgs e)
         {
+            DataGridViewRow selectedRow = null;
             try
             {
-                string queryRole = "SELECT Vaitro, MaNV FROM PHANHE2.V_NHANSU";
-                // Execute the query to get the role and MaNV
-                DataTable dataRole = OracleDataProvider.Instance.ExecuteQuery(queryRole);
+                selectedRow = dtgv.SelectedRows[0];
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Vui lòng chọn dòng cần xử lý.");
+                return;
+            }
 
-                if (dataRole.Rows.Count > 0)
+            string selectedID = selectedRow.Cells["MANV"].Value.ToString();
+
+            string query = $"DELETE FROM {workingtable} where MANV = '{selectedID}'";
+            try
+            {
+                if(OracleDataProvider.Instance.ExecuteNonQuery(query) != 0);
+                    MessageBox.Show($"Đã xóa {selectedID} thành công.");
+            }
+            catch (OracleException ex)
+            {
+                if (ex.Number == 942) // ORA-00942: table or view does not exist
                 {
-                    // Get the role and MaNV from the first row
-                    string vaitro = dataRole.Rows[0]["Vaitro"].ToString();
-                    string MANV = dataRole.Rows[0]["MaNV"].ToString();
-
-
-
-
-
-                    // Create the full query string
-                    string queryU_sdt = $"DELETE FROM PHANHE2.NhanSu WHERE MaNV = '{mans.Text}'";
-                    
-                    if (vaitro == "Trưởng khoa")
-                    {
-                        OracleDataProvider.Instance.ExecuteQuery(queryU_sdt);
-                        MessageBox.Show("Delete successful.");
-                    }
-                    else
-                    {
-                        MessageBox.Show("role khong phu hơp de drop.");
-                    }
-
-                    LoadNhanSuData();
-
+                    // Handle the specific error here
+                    MessageBox.Show("Bạn không có quyền truy cập bảng NhanSu.");
+                }
+                //  insufficient privileges
+                else if (ex.Number == 1031)
+                {
+                    MessageBox.Show("Tài khoản không có đủ quyền.");
                 }
                 else
-                {
-                    MessageBox.Show("No role data found.");
-                }
+                    MessageBox.Show("Lỗi: " + ex.Message);
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show("An error occurred: " + ex.Message);
-            }
-
+            LoadData();
         }
 
-        private void mans_TextChanged(object sender, EventArgs e)
+
+        private void buttonRefresh_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void hoten_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void in_s_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void role_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void phucap_TextChanged(object sender, EventArgs e)
-        {
-
+            LoadData();
         }
     }
 }

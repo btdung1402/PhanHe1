@@ -63,9 +63,29 @@ namespace PhanHe1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_assignment_48 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-assignment-48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_audit_48 {
             get {
                 object obj = ResourceManager.GetObject("icons8-audit-48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_class_48 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-class-48", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -86,6 +106,26 @@ namespace PhanHe1.Properties {
         internal static System.Drawing.Bitmap icons8_delete_48 {
             get {
                 object obj = ResourceManager.GetObject("icons8-delete-48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_department_48 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-department-48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_employee_48 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-employee-48", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -146,6 +186,36 @@ namespace PhanHe1.Properties {
         internal static System.Drawing.Bitmap icons8_privilege_48 {
             get {
                 object obj = ResourceManager.GetObject("icons8-privilege-48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_schedule_48 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-schedule-48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_signup_48 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-signup-48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_student_48 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-student-48", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -116,7 +116,7 @@ namespace PhanHe1
         private void btnList_Click(object sender, EventArgs e)
         {
             lblTitle.Location = oldP;
-            OpenChildForm(new FormList(), sender);
+            OpenChildForm(new PH2_NS(), sender);
         }
 
 
@@ -185,13 +185,14 @@ namespace PhanHe1
             string username = OracleDataProvider.Username.ToUpper();
             lblUser.Text = $"Xin chào, {username}!";
             panel1.Size = new System.Drawing.Size(lblUser.Width + 10, 1);
+            labelRole.Text = $"Vai trò của bạn là {OracleDataProvider.ROLE}";
         }
 
         private void btnPriv_Click(object sender, EventArgs e)
         {
             
             lblTitle.Location = new Point(lblTitle.Location.X - 40, lblTitle.Location.Y);
-            OpenChildForm(new FormPrivilege(), sender);
+            OpenChildForm(new PH2_HP(), sender);
         }
 
         private void btnLogOut_Click(object sender, EventArgs e)
@@ -208,7 +209,7 @@ namespace PhanHe1
 
         private void btnGrantRevoke_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new FormGrant_Revoke(),sender);
+            OpenChildForm(new PH2_DK(),sender);
         }
 
 
@@ -225,13 +226,27 @@ namespace PhanHe1
             this.Hide();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+
+        private void buttonDonVi_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Phanhe2(), sender);
+            OpenChildForm(new PH2_DV(), sender);
         }
 
-        private void panelDesktop_Paint(object sender, PaintEventArgs e)
+        private void buttonKHMO_Click(object sender, EventArgs e)
         {
+            OpenChildForm(new PH2_KHMO(), sender);
+
+        }
+
+        private void buttonStudent_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new PH2_SV(), sender);
+
+        }
+
+        private void buttonPhanCong_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new PH2_PC(), sender);
 
         }
     }

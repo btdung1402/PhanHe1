@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Oracle.ManagedDataAccess.Client;
 
 namespace PhanHe1
 {
@@ -27,21 +28,7 @@ namespace PhanHe1
         {
             try
             {
-                string queryRole = "SELECT Vaitro FROM PHANHE2.V_NHANSU";
-
-                DataTable dataRole = OracleDataProvider.Instance.ExecuteQuery(queryRole);
-                // Get the role from the first row (assuming Vaitro is a single value)
-                string vaitro = dataRole.Rows[0]["Vaitro"].ToString();
-
-                string queryKHM;
-                if(vaitro==null)
-                {
-                    queryKHM = "SELECT * FROM PHANHE2.Sinhvien";
-                }    
-                else
-                {
-                    queryKHM = "SELECT * FROM PHANHE2.KHMO";
-                }
+                string queryKHM = "SELECT * FROM PHANHE2.KHMO";
 
                 // Use OracleDataProvider to execute the query and get the DataTable for SinhVien
                 DataTable dataKHMO = OracleDataProvider.Instance.ExecuteQuery(queryKHM);
@@ -49,9 +36,20 @@ namespace PhanHe1
                 // Assuming you have a DataGridView control named dataGridView1
                 dataGridView1.DataSource = dataKHMO;
             }
-            catch (Exception ex)
+            catch (OracleException ex)
             {
-                MessageBox.Show("An error occurred: " + ex.Message);
+                if (ex.Number == 942) // ORA-00942: table or view does not exist
+                {
+                    // Handle the specific error here
+                    MessageBox.Show("Bạn không có quyền truy cập bảng KeHoachMo.");
+                }
+                //  insufficient privileges
+                else if (ex.Number == 1031)
+                {
+                    MessageBox.Show("Tài khoản không có đủ quyền.");
+                }
+                else
+                    MessageBox.Show("Lỗi: " + ex.Message);
             }
         }
 
