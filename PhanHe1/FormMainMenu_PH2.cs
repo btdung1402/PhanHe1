@@ -224,5 +224,15 @@ namespace PhanHe1
             FormMainMenu_PH1.Instance.Show();
             this.Hide();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Phanhe2(), sender);
+        }
+
+        private void panelDesktop_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
