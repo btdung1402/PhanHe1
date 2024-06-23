@@ -111,18 +111,20 @@ namespace PhanHe2
 
         private void btn_xoa_Click(object sender, EventArgs e)
         {
-            DataGridViewRow selectedRow = null;
-            try
+            
+            string selectedID = tbpcid.Text.Trim();
+
+            if (string.IsNullOrEmpty (selectedID))
             {
-                selectedRow = dataGridView1.SelectedRows[0];
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Vui lòng chọn dòng cần xử lý.");
+                MessageBox.Show("Vui lòng điền phân công ID cần xóa.");
                 return;
             }
 
-            string selectedID = selectedRow.Cells["PHANCONG_ID"].Value.ToString();
+            if (!Regex.IsMatch(selectedID, @"^\d+$"))
+            {
+                MessageBox.Show("Mã phân công chỉ nhận giá trị số.");
+                return;
+            }
 
             string query = string.Empty;
             if (OracleDataProvider.ROLE.ToUpper() == "TRUONGDONVI")
@@ -246,6 +248,16 @@ namespace PhanHe2
                 {
                     // Handle the specific error here
                     MessageBox.Show("Bạn không có quyền truy cập bảng PhanCong.");
+                }
+                else if (ex.Number == 1402 && OracleDataProvider.ROLE.ToLower() == "truongdonvi")
+                { 
+                    // Handle the specific error here
+                    MessageBox.Show("Bạn không được phân công học phần không thuộc đơn vị của mình.");
+                }
+                else if (ex.Number == 1402 && OracleDataProvider.ROLE.ToLower() == "truongkhoa") 
+                {
+                    // Handle the specific error here
+                    MessageBox.Show("Bạn không được phân công học phần không thuộc văn phòng khoa.");
                 }
                 else
                 {

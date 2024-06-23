@@ -70,6 +70,7 @@ namespace PhanHe2
                 tbmasv.Text = OracleDataProvider.Username.ToUpper();
                 tbmasv.Enabled = false;
                 themdangky.Visible = true;
+                panelID.Visible = true; 
             }
             return table;
         }
@@ -320,10 +321,15 @@ namespace PhanHe2
                 {
                     MessageBox.Show("Tài khoản không có đủ quyền.");
                 }
-                else if (ex.Number == 1402 && OracleDataProvider.ROLE.ToLower() == "giaovu") // WITH CHECK OPTION
+                else if (ex.Number == 1402 && OracleDataProvider.ROLE.ToLower() == "giaovu" ) // WITH CHECK OPTION
                 {
                     MessageBox.Show("Chưa đến lúc đăng ký học phần.");
                 }
+                else if (ex.Number == 28115 &&  OracleDataProvider.ROLE.ToLower() == "sinhvien") // WITH CHECK OPTION
+                {
+                    MessageBox.Show("Chưa đến lúc đăng ký học phần.");
+                }
+
                 else
                 {
                     // Handle other Oracle exceptions
