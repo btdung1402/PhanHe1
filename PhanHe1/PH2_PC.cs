@@ -204,6 +204,12 @@ namespace PhanHe1
                 return;
             }
 
+            if (!Regex.IsMatch(nam, @"^\d{4}-\d{4}$"))
+            {
+                MessageBox.Show("Năm nhận giá trị: XXXX-YYYY với YYYY = XXXX + 1");
+                return;
+            }
+
             string query = string.Empty;
 
             // Only execute the update if the role is "Giảng viên"
@@ -305,6 +311,11 @@ namespace PhanHe1
             }
             if (!string.IsNullOrEmpty(nam))
             {
+                if (!Regex.IsMatch(nam, @"^\d{4}-\d{4}$"))
+                {
+                    MessageBox.Show("Năm nhận giá trị: XXXX-YYYY với YYYY = XXXX + 1");
+                    return;
+                }
                 updateClauses.Add($"NAM = '{nam}'");
             }
 

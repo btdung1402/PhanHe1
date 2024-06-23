@@ -109,6 +109,11 @@ namespace PhanHe1
 
         private void buttonUpdate_Click(object sender, EventArgs e)
         {
+            if (OracleDataProvider.ROLE.ToLower() != "giaovu")
+            {
+                return;
+            }
+
             string id = textBoxID.Text.Trim();
             string name = textBoxName.Text.Trim();
             string boss = textBoxBoss.Text.Trim();

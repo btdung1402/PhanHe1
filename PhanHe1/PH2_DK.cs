@@ -291,6 +291,11 @@ namespace PhanHe1
                 return;
             }
 
+            if (!Regex.IsMatch(nam, @"^\d{4}-\d{4}$"))
+            {
+                MessageBox.Show("Năm nhận giá trị: XXXX-YYYY với YYYY = XXXX + 1");
+                return;
+            }
 
             try
             {
