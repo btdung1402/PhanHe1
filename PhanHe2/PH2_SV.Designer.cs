@@ -304,7 +304,7 @@
             this.Controls.Add(this.ttSV);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "PH2_SV";
-            this.Text = "PH2_SV";
+            this.Text = "Sinh viên";
             this.Load += new System.EventHandler(this.PH2_SV_Load);
             this.ttSV.ResumeLayout(false);
             this.ttSV.PerformLayout();
