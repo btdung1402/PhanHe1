@@ -127,6 +127,7 @@
             this.dtgv.Location = new System.Drawing.Point(12, 12);
             this.dtgv.MultiSelect = false;
             this.dtgv.Name = "dtgv";
+            this.dtgv.ReadOnly = true;
             this.dtgv.RowHeadersWidth = 51;
             this.dtgv.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dtgv.RowTemplate.Height = 24;

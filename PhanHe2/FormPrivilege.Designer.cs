@@ -56,12 +56,13 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dtgv.DefaultCellStyle = dataGridViewCellStyle1;
             this.dtgv.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(122)))), ((int)(((byte)(125)))));
-            this.dtgv.Location = new System.Drawing.Point(6, 50);
-            this.dtgv.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtgv.Location = new System.Drawing.Point(8, 62);
+            this.dtgv.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtgv.Name = "dtgv";
+            this.dtgv.ReadOnly = true;
             this.dtgv.RowHeadersWidth = 51;
             this.dtgv.RowTemplate.Height = 24;
-            this.dtgv.Size = new System.Drawing.Size(657, 337);
+            this.dtgv.Size = new System.Drawing.Size(876, 415);
             this.dtgv.TabIndex = 1;
             // 
             // txtSearch
@@ -69,10 +70,10 @@
             this.txtSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(122)))), ((int)(((byte)(125)))));
-            this.txtSearch.Location = new System.Drawing.Point(5, 22);
-            this.txtSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSearch.Location = new System.Drawing.Point(7, 27);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(515, 23);
+            this.txtSearch.Size = new System.Drawing.Size(686, 26);
             this.txtSearch.TabIndex = 2;
             this.txtSearch.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSearch_KeyDown);
             // 
@@ -83,10 +84,10 @@
             this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSearch.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearch.ForeColor = System.Drawing.Color.White;
-            this.btnSearch.Location = new System.Drawing.Point(590, 6);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSearch.Location = new System.Drawing.Point(787, 7);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(62, 41);
+            this.btnSearch.Size = new System.Drawing.Size(83, 50);
             this.btnSearch.TabIndex = 3;
             this.btnSearch.Text = "Tìm kiếm";
             this.btnSearch.UseVisualStyleBackColor = false;
@@ -100,9 +101,9 @@
             this.pnlControl.Controls.Add(this.txtSearch);
             this.pnlControl.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlControl.Location = new System.Drawing.Point(0, 0);
-            this.pnlControl.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlControl.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlControl.Name = "pnlControl";
-            this.pnlControl.Size = new System.Drawing.Size(682, 46);
+            this.pnlControl.Size = new System.Drawing.Size(909, 57);
             this.pnlControl.TabIndex = 4;
             // 
             // lblTitle
@@ -111,10 +112,9 @@
             this.lblTitle.BackColor = System.Drawing.SystemColors.Control;
             this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(122)))), ((int)(((byte)(125)))));
-            this.lblTitle.Location = new System.Drawing.Point(7, 4);
-            this.lblTitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTitle.Location = new System.Drawing.Point(9, 5);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(123, 17);
+            this.lblTitle.Size = new System.Drawing.Size(142, 20);
             this.lblTitle.TabIndex = 4;
             this.lblTitle.Text = "Nhập User/Role";
             // 
@@ -125,10 +125,10 @@
             this.btnDel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDel.Font = new System.Drawing.Font("Roboto", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDel.ForeColor = System.Drawing.Color.White;
-            this.btnDel.Location = new System.Drawing.Point(524, 6);
-            this.btnDel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDel.Location = new System.Drawing.Point(699, 7);
+            this.btnDel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDel.Name = "btnDel";
-            this.btnDel.Size = new System.Drawing.Size(62, 41);
+            this.btnDel.Size = new System.Drawing.Size(83, 50);
             this.btnDel.TabIndex = 3;
             this.btnDel.Text = "Xóa chữ";
             this.btnDel.UseVisualStyleBackColor = false;
@@ -136,12 +136,12 @@
             // 
             // FormPrivilege
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(682, 390);
+            this.ClientSize = new System.Drawing.Size(909, 480);
             this.Controls.Add(this.pnlControl);
             this.Controls.Add(this.dtgv);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormPrivilege";
             this.Text = "Xem User/Role Privileges";
             this.Load += new System.EventHandler(this.FormPrivilege_Load);
